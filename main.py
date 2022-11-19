@@ -1,7 +1,12 @@
 # This is a sample Python script.
-from BinarySearch.FindPeakElement import FindPeakElement
-from BinarySearch.SearchInRotatedSortedArray import SearchInRotatedSortedArray
-from TwoPointer.SortColors import SortColors
+from BFS.CourseSchedule import CourseSchedule
+from BFS.SequenceReconstruction import SequenceReconstruction
+from BFS.TopologicalSort import TopologicalSort
+from BinaryTree.BinaryTreePaths import TreeNode
+from DFS.TravelingSalesmanProblem import TravelingSalesmanProblem
+from DataStructure.Rehashing import Rehashing, ListNode
+from DivideConquer.FlatternBinaryTreeToLinkedList import FlatternBinaryTreeToLinkedList
+from DivideConquer.KthSmallestElementInaBST import KthSmallestElementInaBST
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -32,9 +37,13 @@ if __name__ == '__main__':
     # array = [4,5,1,2,3]
     # print(p0_5.search(array, 1))
 
-    p0_6 = FindPeakElement()
-    a = [1]
-    print(p0_6.find_peak(a))
+    # p0_6 = FindPeakElement()
+    # print(p0_6.find_peak([1]))
+
+    # p0_7 = WoodCut()
+    # l = [4, 6, 7, 8]
+    # k = 3
+    # print(p0_7.wood_cut(l, k))
 
     # 56. Two Sum
     # p1_1 = TwoSum()
@@ -106,7 +115,7 @@ if __name__ == '__main__':
     # treeNode1.right = treeNode3
     # treeNode2.right = treeNode5
     # p7 = BinaryTreePaths()
-    # paths = p7.binary_tree_paths(treeNode1)
+    # paths = p7.binary_tree_paths2(treeNode1)
     # print(paths)
 
     # CloneGraph
@@ -161,6 +170,30 @@ if __name__ == '__main__':
     # rooms = [[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
     # print(p9_1_2.walls_and_gates(rooms))
 
+    # p9_1_3 = TopologicalSort()
+    # node0 = Node(0)
+    # node1 = Node(1)
+    # node2 = Node(2)
+    # node3 = Node(3)
+    # node0.neighbors.append(node1)
+    # node0.neighbors.append(node2)
+    # node1.neighbors.append(node3)
+    # node2.neighbors.append(node3)
+    # graph = {node0, node1, node2, node3}
+    # print(p9_1_3.topSort(graph))
+    # p9_1_3_1 = CourseSchedule()
+    # preresquisites = [[5,8],[3,5],[1,9],[4,5],[0,2],[1,9],[7,8],[4,9]] # [[1,0], [2,0], [3,1], [3,2]]
+    # print(p9_1_3_1.can_finish(10, preresquisites))
+    #
+    # p9_1_3_2 = SequenceReconstruction()
+    # org = [1, 2, 3]
+    # seqs = [[1,2], [1,3], [2,3]]
+    # p9_1_3_2.sequence_reconstruction(org, seqs)
+
+    # p9_1_4 = WordLadder()
+    # dict = {"hot", "dot", "dog", "lot", "log"}
+    # print(p9_1_4.ladder_length("hit", "cog", dict))
+
     # InvertBinaryTree
     # treeNode1: TreeNode = TreeNode(1)
     # treeNode2 = TreeNode(2)
@@ -188,6 +221,23 @@ if __name__ == '__main__':
     # treeNode1.right = treeNode3
     # print(p9_3.longest_consecutive(treeNode1))
 
+    # p9_4 = FlatternBinaryTreeToLinkedList()
+    # treeNode1 = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode1.left = treeNode2
+    # treeNode1.right = treeNode3
+    # p9_4.flatten(treeNode1)
+    # p9_4.print(treeNode1)
+
+    # p9_5 = KthSmallestElementInaBST()
+    # treeNode1 = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode1.left = None
+    # treeNode1.right = treeNode2
+    # print(p9_5.kth_smallest(treeNode1, 2))
+
     # DFS
     # Subsets
     # nums = [1, 2]
@@ -199,6 +249,10 @@ if __name__ == '__main__':
     # nums = [1, 2, 3]
     # p11 = Permutations()
     # print(p11.permute(nums))
+
+    # p11_1_1 = TravelingSalesmanProblem()
+    # tuple = [[1,2,1], [2,3,2], [1,3,3]]
+    # print(p11_1_1.min_cost(3, tuple))
 
     # LetterCombinationsOfPhoneNumber
     # p11_1 = LetterCombinationsOfPhoneNumber()
@@ -229,5 +283,12 @@ if __name__ == '__main__':
 
     # p14_1 = BashGame()
     # print(p14_1.can_win_bash(12))
+
+    p15 = Rehashing()
+    listNone9 = ListNode(9)
+    listNone21 = ListNode(21, listNone9)
+    listNone14 = ListNode(14)
+    hashTable = [None, listNone21, listNone14, None]
+    p15.rehashing(hashTable)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

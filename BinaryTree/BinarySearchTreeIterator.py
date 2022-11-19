@@ -49,3 +49,12 @@ class BSTIterator:
                 n = self.stack.pop()
 
         return node
+
+    def next(self):
+        node = self.stack.pop()
+        if node.right:
+            curr = node.right
+            while curr:
+                self.stack.append(curr)
+                curr = curr.left
+        return node
