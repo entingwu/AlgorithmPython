@@ -1,16 +1,34 @@
 # This is a sample Python script.
+from BFS.AlienDictionary import AlienDictionary
 from BFS.CourseSchedule import CourseSchedule
 from BFS.SequenceReconstruction import SequenceReconstruction
 from BFS.TopologicalSort import TopologicalSort
 from BinaryTree.BinaryTreePaths import TreeNode
+from DFS.CombinationSum import CombinationSum
+from DFS.StringPermutation import StringPermutation
 from DFS.TravelingSalesmanProblem import TravelingSalesmanProblem
+from DFS.WordSearch import WordSearch
+from DataStructure.KClosestPoints import KClosestPoints, Point
 from DataStructure.Rehashing import Rehashing, ListNode
+from DataStructure.UglyNumber import UglyNumber
+from DataStructure.UniqueNumberOfOccurences import UniqueNumberOfOccurences
 from DivideConquer.FlatternBinaryTreeToLinkedList import FlatternBinaryTreeToLinkedList
 from DivideConquer.KthSmallestElementInaBST import KthSmallestElementInaBST
+from DynamicProgramming.Backpack import Backpack
+from DynamicProgramming.KnightShortestPath import KnightShortestPath
+from Memorization.Triangle import Triangle
+from Memorization.WildcardMatching import WildcardMatching
+from Memorization.WordBreak import WordBreak
+from Memorization.WordPattern import WordPattern
+from PrefixSum.MaximumSubarray import MaximumSubarray
+from PrefixSum.ShortestSubarrayWithSumAtLeastK import ShortestSubarrayWithSumAtLeastK
+from PrefixSum.SubarraySumEqualsToK import SubarraySumEqualsToK
+from TwoPointer.TriangleCount import TriangleCount
 
 # Press ⌃R to execute it or replace it with your code.
 
 # Press the green button in the gutter to run the script.
+
 if __name__ == '__main__':
     # p0 = ValidPalindrome()
     # s = "A man, a plan, a canal: Panama"
@@ -238,6 +256,10 @@ if __name__ == '__main__':
     # treeNode1.right = treeNode2
     # print(p9_5.kth_smallest(treeNode1, 2))
 
+    # p9_6 = AlienDictionary()
+    # words = ["wrt", "wrf", "er", "ett", "rftt"]
+    # print(p9_6.alien_order(words))
+
     # DFS
     # Subsets
     # nums = [1, 2]
@@ -266,6 +288,20 @@ if __name__ == '__main__':
     # target = 5
     # print(p11_2.k_sum_i_i(array, k, target))
 
+    # p11_3 = StringPermutation()
+    # str = "abb"
+    # print(p11_3.string_permutation2(str))
+
+    # p11_4 = CombinationSum()
+    # candidates = [2, 2, 3]
+    # target = 5
+    # print(p11_4.combination_sum(candidates, target))
+
+    p11_5 = WordSearch()
+    boards = [["a", "t"], ["c", "d"]]
+    words = ["cat", "at"]
+    # print(p11_5.word_search_i_i(boards, words))
+
     # NQueens
     # n = 4
     # p12 = NQueens()
@@ -284,11 +320,62 @@ if __name__ == '__main__':
     # p14_1 = BashGame()
     # print(p14_1.can_win_bash(12))
 
-    p15 = Rehashing()
-    listNone9 = ListNode(9)
-    listNone21 = ListNode(21, listNone9)
-    listNone14 = ListNode(14)
-    hashTable = [None, listNone21, listNone14, None]
-    p15.rehashing(hashTable)
+    # p14_2 = WildcardMatching()
+    # source = "aa"
+    # pattern = "a*"
+    # print(p14_2.is_match(source, pattern))
+
+    # p14_3 = WordPattern()
+    # pattern = "aba"
+    # str = "redbluered"
+    # print(p14_3.word_pattern_match(pattern, str))
+
+    # p14_4 = WordBreak()
+    # s = "lintcode"
+    # dict = ["de","ding","co","code","lint"]
+    # print(p14_4.word_break(s, dict))
+
+    # p15 = Rehashing()
+    # listNone9 = ListNode(9)
+    # listNone21 = ListNode(21, listNone9)
+    # listNone14 = ListNode(14)
+    # hashTable = [None, listNone21, listNone14, None]
+    # p15.rehashing(hashTable)
+
+    # p15_1_1 = UniqueNumberOfOccurences()
+    # arr = [1,2,2,1,1,3]
+    # print(p15_1_1.uniqueOccurrences(arr))
+
+    # p15_1 = UglyNumber()
+    # print(p15_1.nth_ugly_number(7))
+
+    # p15_2 = KClosestPoints()
+    # points = [Point(4, 6), Point(4, 7), Point(4, 4), Point(2, 5), Point(1, 1)]
+    # origin = Point(0, 0)
+    # print(p15_2.k_closest(points, origin, 3))
+
+    # p16 = Backpack()
+    # m = 10
+    # array = [3, 4, 8, 5]
+    # p16.back_pack(m, array)
+
+    # p16_1 = KnightShortestPath()
+    # grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+    # print(p16_1.shortest_path2(grid))
+
+    # Prefix Sum
+    # p17_1 = SubarraySumEqualsToK()
+    # nums = [3, 1, -1, 5, 7] #[2, 1, -1, 4, 2, -3]
+    # k = 12 #3
+    # print(p17_1.subarraySum([1], 0))
+
+    # p17_2 = MaximumSubarray()
+    # nums = [-2, 2, -3, 4, -1, 2, 1, -5, 3]
+    # print(p17_2.max_sub_array([-1]))
+
+    p17_3 = ShortestSubarrayWithSumAtLeastK()
+    a = [5, -1, 2, 3, -2]
+    k = 8
+    print(p17_3.shortest_subarray(a, k))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
