@@ -4,7 +4,9 @@ from BFS.CourseSchedule import CourseSchedule
 from BFS.SequenceReconstruction import SequenceReconstruction
 from BFS.TopologicalSort import TopologicalSort
 from BinaryTree.BinaryTreePaths import TreeNode
+from BinaryTree.DiameterOfBinaryTree import DiameterOfBinaryTree
 from DFS.CombinationSum import CombinationSum
+from DFS.MinimumScoreOfaPathBetweenTwoCities import MinimumScoreOfaPathBetweenTwoCities
 from DFS.StringPermutation import StringPermutation
 from DFS.TravelingSalesmanProblem import TravelingSalesmanProblem
 from DFS.WordSearch import WordSearch
@@ -20,9 +22,11 @@ from Memorization.Triangle import Triangle
 from Memorization.WildcardMatching import WildcardMatching
 from Memorization.WordBreak import WordBreak
 from Memorization.WordPattern import WordPattern
+from PrefixSum.CircularSentence import CircularSentence
 from PrefixSum.MaximumSubarray import MaximumSubarray
 from PrefixSum.ShortestSubarrayWithSumAtLeastK import ShortestSubarrayWithSumAtLeastK
 from PrefixSum.SubarraySumEqualsToK import SubarraySumEqualsToK
+from TwoPointer.DividePlayersIntoTeamsOfEqualSkill import DividePlayersIntoTeamsOfEqualSkill
 from TwoPointer.TriangleCount import TriangleCount
 
 # Press ⌃R to execute it or replace it with your code.
@@ -213,19 +217,21 @@ if __name__ == '__main__':
     # print(p9_1_4.ladder_length("hit", "cog", dict))
 
     # InvertBinaryTree
-    # treeNode1: TreeNode = TreeNode(1)
-    # treeNode2 = TreeNode(2)
-    # treeNode3 = TreeNode(3)
-    # treeNode4 = TreeNode(4)
-    # treeNode1.left = treeNode2
-    # treeNode1.right = treeNode3
-    # treeNode3.left = treeNode4
+    treeNode1: TreeNode = TreeNode(1)
+    treeNode2 = TreeNode(2)
+    treeNode3 = TreeNode(3)
+    treeNode4 = TreeNode(4)
+    treeNode1.left = treeNode2
+    treeNode1.right = treeNode3
+    treeNode3.left = treeNode4
     # p9_1 = BinaryTreeLevelOrderTraversal()
     # p9_2 = InvertBinaryTree()
     # treeNode1 = p9_2.invert_binary_tree(treeNode1)
     # results = p9_1.level_order(treeNode1)
     # for level_result in results:
     #     print(level_result)
+    p9_2_1 = DiameterOfBinaryTree()
+    print(p9_2_1.diameter_of_binary_tree(treeNode1))
     # p9_3 = BinaryTreeLongestConsecutiveSequence()
     # treeNode1 = TreeNode(1)
     # treeNode2 = TreeNode(2)
@@ -373,9 +379,20 @@ if __name__ == '__main__':
     # nums = [-2, 2, -3, 4, -1, 2, 1, -5, 3]
     # print(p17_2.max_sub_array([-1]))
 
-    p17_3 = ShortestSubarrayWithSumAtLeastK()
-    a = [5, -1, 2, 3, -2]
-    k = 8
-    print(p17_3.shortest_subarray(a, k))
+    # p17_3 = ShortestSubarrayWithSumAtLeastK()
+    # a = [5, -1, 2, 3, -2]
+    # k = 8
+    # print(p17_3.shortest_subarray(a, k))
+
+    #p18 = CircularSentence()
+    #print(p18.isCircularSentence("eetcoda"))
+    # p18_1 = DividePlayersIntoTeamsOfEqualSkill()
+    # skill = [3, 2, 5, 1, 3, 4] # [2,1,5,2]
+    # print(p18_1.dividePlayers([2, 2, 2, 2]))
+    # p18_2 = MinimumScoreOfaPathBetweenTwoCities()
+    # roads = [[1,2,9], [2,3,6], [2,4,5], [1,4,7]]
+    # roads1 = [[1,2,2],[1,3,4],[3,4,7]]
+    # n = 4
+    # print(p18_2.minScore(n, roads))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

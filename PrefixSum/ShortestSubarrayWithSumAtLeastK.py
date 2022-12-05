@@ -13,7 +13,7 @@ class Heap:
 
     def _lazy_deletion(self):
         while self.minheap and self.minheap[0][1] in self.deleted_set:
-            index, prefix = heappop(self.minheap)
+            value, index = heappop(self.minheap)
             self.deleted_set.remove(index)
 
     def top(self):
@@ -28,7 +28,7 @@ class Heap:
         self.deleted_set.add(index)
 
     def is_empty(self):
-        return len(self.minheap) > 0
+        return not bool(self.minheap)
 
 class ShortestSubarrayWithSumAtLeastK:
     """
@@ -50,16 +50,16 @@ class ShortestSubarrayWithSumAtLeastK:
             return start
         if self.is_valid(prefix_sum, k, end):
             return end
+        return -1
 
     def is_valid(self, prefix_sum, k, length):
         minheap = Heap()
         for end in range(len(prefix_sum)):
             index = end - length - 1
             minheap.delete(index)
-
             if not minheap.is_empty() and prefix_sum[end] - minheap.top()[0] >= k:
                 return True
-            minheap.push(end, prefix_sum[end])
+            minheap.push(prefix_sum[end], end)
         return False
 
     def get_prefix_sum(self, a):
