@@ -5,6 +5,7 @@ from BFS.SequenceReconstruction import SequenceReconstruction
 from BFS.TopologicalSort import TopologicalSort
 from BinaryTree.BinaryTreePaths import TreeNode
 from BinaryTree.DiameterOfBinaryTree import DiameterOfBinaryTree
+from BinaryTree.LongestPathOnTheTree import LongestPathOnTheTree
 from DFS.CombinationSum import CombinationSum
 from DFS.MinimumScoreOfaPathBetweenTwoCities import MinimumScoreOfaPathBetweenTwoCities
 from DFS.StringPermutation import StringPermutation
@@ -28,6 +29,7 @@ from PrefixSum.ShortestSubarrayWithSumAtLeastK import ShortestSubarrayWithSumAtL
 from PrefixSum.SubarraySumEqualsToK import SubarraySumEqualsToK
 from TwoPointer.DividePlayersIntoTeamsOfEqualSkill import DividePlayersIntoTeamsOfEqualSkill
 from TwoPointer.TriangleCount import TriangleCount
+from UnionFind.GraphValidTree import GraphValidTree
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -230,8 +232,15 @@ if __name__ == '__main__':
     # results = p9_1.level_order(treeNode1)
     # for level_result in results:
     #     print(level_result)
-    p9_2_1 = DiameterOfBinaryTree()
-    print(p9_2_1.diameter_of_binary_tree(treeNode1))
+    # p9_2_1 = DiameterOfBinaryTree()
+    # print(p9_2_1.diameter_of_binary_tree(treeNode1))
+    # p9_2_2 = LongestPathOnTheTree()
+    # n = 5
+    # starts = [0, 0, 2, 2]
+    # ends = [1, 2, 3, 4]
+    # lens = [1, 2, 5, 6]
+    # print(p9_2_2.longest_path(n, starts, ends, lens))
+
     # p9_3 = BinaryTreeLongestConsecutiveSequence()
     # treeNode1 = TreeNode(1)
     # treeNode2 = TreeNode(2)
@@ -394,5 +403,18 @@ if __name__ == '__main__':
     # roads1 = [[1,2,2],[1,3,4],[3,4,7]]
     # n = 4
     # print(p18_2.minScore(n, roads))
+
+    # Union Find
+    p19_1 = GraphValidTree()
+    edges = [[1,2], [1,3], [2,3]]
+    #print(p19_1.valid_tree(4, edges))
+    p19_1.addEdge(1, 2)
+    print(p19_1.isValidTree())
+    p19_1.addEdge(1, 3)
+    print(p19_1.isValidTree())
+    p19_1.addEdge(1, 5)
+    print(p19_1.isValidTree())
+    p19_1.addEdge(3, 5)
+    print(p19_1.isValidTree())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

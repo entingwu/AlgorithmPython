@@ -12,14 +12,15 @@ class DiameterOfBinaryTree:
     @return: return a integer
     """
     def diameter_of_binary_tree(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-        max_ld, max_lc = self.dfs(root)
-        return max_ld
+        max_diameter, max_chain = self.dfs(root)
+        return max_diameter
 
     def dfs(self, root):
         if not root:
             return [0, 0]
-        ld, lc = self.dfs(root.left)
-        rd, rc = self.dfs(root.right)
-        return [max(ld, rd, lc + rc), max(lc, rc) + 1]
+        left_max_diameter, left_max_chain = self.dfs(root.left)
+        right_max_diameter, right_max_chain = self.dfs(root.right)
+
+        max_diameter = max(left_max_diameter, right_max_diameter, left_max_chain + right_max_chain)
+        max_chain = max(left_max_chain, right_max_chain) + 1
+        return [max_diameter, max_chain]
