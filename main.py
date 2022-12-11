@@ -1,35 +1,5 @@
 # This is a sample Python script.
-from BFS.AlienDictionary import AlienDictionary
-from BFS.CourseSchedule import CourseSchedule
-from BFS.SequenceReconstruction import SequenceReconstruction
-from BFS.TopologicalSort import TopologicalSort
-from BinaryTree.BinaryTreePaths import TreeNode
-from BinaryTree.DiameterOfBinaryTree import DiameterOfBinaryTree
-from BinaryTree.LongestPathOnTheTree import LongestPathOnTheTree
-from DFS.CombinationSum import CombinationSum
-from DFS.MinimumScoreOfaPathBetweenTwoCities import MinimumScoreOfaPathBetweenTwoCities
-from DFS.StringPermutation import StringPermutation
-from DFS.TravelingSalesmanProblem import TravelingSalesmanProblem
-from DFS.WordSearch import WordSearch
-from DataStructure.KClosestPoints import KClosestPoints, Point
-from DataStructure.Rehashing import Rehashing, ListNode
-from DataStructure.UglyNumber import UglyNumber
-from DataStructure.UniqueNumberOfOccurences import UniqueNumberOfOccurences
-from DivideConquer.FlatternBinaryTreeToLinkedList import FlatternBinaryTreeToLinkedList
-from DivideConquer.KthSmallestElementInaBST import KthSmallestElementInaBST
-from DynamicProgramming.Backpack import Backpack
-from DynamicProgramming.KnightShortestPath import KnightShortestPath
-from Memorization.Triangle import Triangle
-from Memorization.WildcardMatching import WildcardMatching
-from Memorization.WordBreak import WordBreak
-from Memorization.WordPattern import WordPattern
-from PrefixSum.CircularSentence import CircularSentence
-from PrefixSum.MaximumSubarray import MaximumSubarray
-from PrefixSum.ShortestSubarrayWithSumAtLeastK import ShortestSubarrayWithSumAtLeastK
-from PrefixSum.SubarraySumEqualsToK import SubarraySumEqualsToK
-from TwoPointer.DividePlayersIntoTeamsOfEqualSkill import DividePlayersIntoTeamsOfEqualSkill
-from TwoPointer.TriangleCount import TriangleCount
-from UnionFind.GraphValidTree import GraphValidTree
+from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -105,6 +75,16 @@ if __name__ == '__main__':
     # p4_1.sort_colors2(nums, 4)
     # print(nums)
 
+    # p4_2 = GrumpyBookstoreOwner()
+    # customers = [1,0,1,2,1,1,7,5]
+    # grumpy = [0,1,0,1,0,1,0,1]
+    # x = 3
+    # print(p4_2.max_satisfied(customers, grumpy, x))
+
+    # p4_3 = PickApples()
+    # A = [6, 1, 4, 6, 3, 2, 7, 4]
+    # K, L = 3, 2
+    # print(p4_3.pick_apples(A, K, L))
     # p5 = ImplementQueueByLinkedList()
     # p5.enqueue(1)
     # p5.enqueue(2)
@@ -219,13 +199,13 @@ if __name__ == '__main__':
     # print(p9_1_4.ladder_length("hit", "cog", dict))
 
     # InvertBinaryTree
-    treeNode1: TreeNode = TreeNode(1)
-    treeNode2 = TreeNode(2)
-    treeNode3 = TreeNode(3)
-    treeNode4 = TreeNode(4)
-    treeNode1.left = treeNode2
-    treeNode1.right = treeNode3
-    treeNode3.left = treeNode4
+    # treeNode1: TreeNode = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode4 = TreeNode(4)
+    # treeNode1.left = treeNode2
+    # treeNode1.right = treeNode3
+    # treeNode3.left = treeNode4
     # p9_1 = BinaryTreeLevelOrderTraversal()
     # p9_2 = InvertBinaryTree()
     # treeNode1 = p9_2.invert_binary_tree(treeNode1)
@@ -240,6 +220,12 @@ if __name__ == '__main__':
     # ends = [1, 2, 3, 4]
     # lens = [1, 2, 5, 6]
     # print(p9_2_2.longest_path(n, starts, ends, lens))
+    # p9_2_3 = NaryTreePreorderTraversal()
+    # node6 = Node(6, [])
+    # node5 = Node(5, [])
+    # node3 = Node(3, [node5, node6])
+    # node1 = Node(1, [node3, Node(2, []), Node(4, [])])
+    # print(p9_2_3.preorder(node1))
 
     # p9_3 = BinaryTreeLongestConsecutiveSequence()
     # treeNode1 = TreeNode(1)
@@ -312,9 +298,9 @@ if __name__ == '__main__':
     # target = 5
     # print(p11_4.combination_sum(candidates, target))
 
-    p11_5 = WordSearch()
-    boards = [["a", "t"], ["c", "d"]]
-    words = ["cat", "at"]
+    # p11_5 = WordSearch()
+    # boards = [["a", "t"], ["c", "d"]]
+    # words = ["cat", "at"]
     # print(p11_5.word_search_i_i(boards, words))
 
     # NQueens
@@ -393,6 +379,11 @@ if __name__ == '__main__':
     # k = 8
     # print(p17_3.shortest_subarray(a, k))
 
+    # p17_4 = MinimumSizeSubarraySum()
+    # nums = [2, 3, 1, 2, 4, 3]
+    # s = 7
+    # print(p17_4.minimum_size(nums, s))
+
     #p18 = CircularSentence()
     #print(p18.isCircularSentence("eetcoda"))
     # p18_1 = DividePlayersIntoTeamsOfEqualSkill()
@@ -405,16 +396,20 @@ if __name__ == '__main__':
     # print(p18_2.minScore(n, roads))
 
     # Union Find
-    p19_1 = GraphValidTree()
-    edges = [[1,2], [1,3], [2,3]]
-    #print(p19_1.valid_tree(4, edges))
-    p19_1.addEdge(1, 2)
-    print(p19_1.isValidTree())
-    p19_1.addEdge(1, 3)
-    print(p19_1.isValidTree())
-    p19_1.addEdge(1, 5)
-    print(p19_1.isValidTree())
-    p19_1.addEdge(3, 5)
-    print(p19_1.isValidTree())
+    # p19_1 = GraphValidTree()
+    # edges = [[1,2], [1,3], [2,3]]
+    # #print(p19_1.valid_tree(4, edges))
+    # p19_1.addEdge(1, 2)
+    # print(p19_1.isValidTree())
+    # p19_1.addEdge(1, 3)
+    # print(p19_1.isValidTree())
+    # p19_1.addEdge(1, 5)
+    # print(p19_1.isValidTree())
+    # p19_1.addEdge(3, 5)
+    # print(p19_1.isValidTree())
+
+    p20_1 = LongestSquareStreakInAnArray()
+    nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
+    print(p20_1.longestSquareStreak(nums))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
