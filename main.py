@@ -1,4 +1,5 @@
 # This is a sample Python script.
+from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
 
 # Press ⌃R to execute it or replace it with your code.
@@ -408,8 +409,13 @@ if __name__ == '__main__':
     # p19_1.addEdge(3, 5)
     # print(p19_1.isValidTree())
 
-    p20_1 = LongestSquareStreakInAnArray()
-    nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
-    print(p20_1.longestSquareStreak(nums))
+    # p20_1 = LongestSquareStreakInAnArray()
+    # nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
+    # print(p20_1.longestSquareStreak(nums))
+
+    # Monotonic Stack
+    p21_1 = LargestRectangleInHistogram()
+    height = [2, 1, 5, 6, 2, 3]
+    print(p21_1.largest_rectangle_area(height))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
