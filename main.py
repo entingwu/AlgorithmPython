@@ -1,6 +1,13 @@
 # This is a sample Python script.
+from DFS.FloodFill import FloodFill
+from DynamicProgramming.ClimbingStairs import ClimbingStairs
+from DynamicProgramming.PaintHouse import PaintHouse
+from DynamicProgramming.UniquePaths import UniquePaths
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
+from MonotonicStack.MaximalRectangle import MaximalRectangle
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
+from TwoPointer.SlidingWindow.MinimumWindowSubstring import MinimumWindowSubstring
+from TwoPointer.SlidingWindow.SubstringWithAtLeastKDistinctCharacters import SubstringWithAtLeastKDistinctCharacters
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -86,6 +93,16 @@ if __name__ == '__main__':
     # A = [6, 1, 4, 6, 3, 2, 7, 4]
     # K, L = 3, 2
     # print(p4_3.pick_apples(A, K, L))
+
+    # p4_4 = SubstringWithAtLeastKDistinctCharacters()
+    # S = "abcaac"
+    # k = 2
+    # print(p4_4.k_distinct_characters(S, k))
+
+    # p4_5 = MinimumWindowSubstring()
+    # source, target = "abc", "ac"
+    # print(p4_5.min_window(source, target))
+
     # p5 = ImplementQueueByLinkedList()
     # p5.enqueue(1)
     # p5.enqueue(2)
@@ -314,6 +331,11 @@ if __name__ == '__main__':
     # p13 = LongestPalindromeSubstring()
     # print(p13.longest_palindrome_3(s))
 
+    # p13_1 = FloodFill()
+    # image = [[1, 1, 1], [1, 1, 0], [1, 0, 1]]
+    # sr, sc, color = 1, 1, 2
+    # print(p13_1.floodFill(image, sr, sc, 2))
+
     # Memorization
     # p14 = Triangle()
     # triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]
@@ -365,6 +387,16 @@ if __name__ == '__main__':
     # grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
     # print(p16_1.shortest_path2(grid))
 
+    # p16_2 = ClimbingStairs()
+    # print(p16_2.climbStairs(3))
+
+    # p16_3 = PaintHouse()
+    # costs = [[17,2,17],[16,16,5],[14,3,19]]
+    # print(p16_3.minCost(costs))
+
+    p16_4 = UniquePaths()
+    print(p16_4.uniquePaths(3, 7))
+
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
     # nums = [3, 1, -1, 5, 7] #[2, 1, -1, 4, 2, -3]
@@ -414,8 +446,12 @@ if __name__ == '__main__':
     # print(p20_1.longestSquareStreak(nums))
 
     # Monotonic Stack
-    p21_1 = LargestRectangleInHistogram()
-    height = [2, 1, 5, 6, 2, 3]
-    print(p21_1.largest_rectangle_area(height))
+    # p21_1 = LargestRectangleInHistogram()
+    # height = [2, 1, 5, 6, 2, 3]
+    # print(p21_1.largest_rectangle_area(height))
+    #
+    # p21_2 = MaximalRectangle()
+    # matrix = [[1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 0, 1]]
+    # print(p21_2.maximal_rectangle(matrix))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
