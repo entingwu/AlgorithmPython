@@ -5,9 +5,15 @@ from DynamicProgramming.PaintHouse import PaintHouse
 from DynamicProgramming.UniquePaths import UniquePaths
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from TwoPointer.BullsAndCows import BullsAndCows
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
+from TwoPointer.SlidingWindow.FindAllAnagramsInaString import FindAllAnagramsInaString
+from TwoPointer.SlidingWindow.LongestRepeatingCharacterReplacement import LongestRepeatingCharacterReplacement
 from TwoPointer.SlidingWindow.MinimumWindowSubstring import MinimumWindowSubstring
 from TwoPointer.SlidingWindow.SubstringWithAtLeastKDistinctCharacters import SubstringWithAtLeastKDistinctCharacters
+from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
+from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
+from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -70,6 +76,10 @@ if __name__ == '__main__':
     # print(p2.find(4))
     # print(p2.find(7))
 
+    p2_1 = BullsAndCows()
+    secret, guess = "1122", "1222"
+    p2_1.getHint(secret, guess)
+
     # 57. 3Sum
     # p3 = ThreeSum()
     # print(p3.three_sum([2, 7, 11, 15]))
@@ -102,6 +112,30 @@ if __name__ == '__main__':
     # p4_5 = MinimumWindowSubstring()
     # source, target = "abc", "ac"
     # print(p4_5.min_window(source, target))
+
+    # p4_6 = FindAllAnagramsInaString()
+    # #s, p = "cbaebabacd", "abc"
+    # s, p = "bpaa", "aa"
+    # print(p4_6.findAnagrams(s, p))
+
+    # p4_7 = LongestRepeatingCharacterReplacement()
+    # s, k = "AABABBA", 3
+    # print(p4_7.characterReplacement(s, k))
+
+    # SweepLine
+    # p4_6 = MergeIntervals()
+    # intervals = [Interval(2,3), Interval(0,1), Interval(1,2), Interval(3,4), Interval(4,5), Interval(1,1), Interval(0,1),
+    #              Interval(4,6), Interval(5,7), Interval(1,1), Interval(3,5)]
+    # print(p4_6.merge(intervals))
+
+    # p4_7 = MeetingRooms()
+    # intervals = [Interval(1,3), Interval(3,4)]
+    # print(p4_7.min_meeting_rooms(intervals))
+
+    # p4_8 = EmployeeFreeTime()
+    # schedule = [[1,3,6,7], [2,4], [2,5,9,12]]
+    # schedule1 = [[1,2], [2,3]]
+    # print(p4_8.employee_free_time(schedule1))
 
     # p5 = ImplementQueueByLinkedList()
     # p5.enqueue(1)
@@ -394,8 +428,8 @@ if __name__ == '__main__':
     # costs = [[17,2,17],[16,16,5],[14,3,19]]
     # print(p16_3.minCost(costs))
 
-    p16_4 = UniquePaths()
-    print(p16_4.uniquePaths(3, 7))
+    # p16_4 = UniquePaths()
+    # print(p16_4.uniquePaths(3, 7))
 
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
