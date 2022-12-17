@@ -1,5 +1,6 @@
 # This is a sample Python script.
 from DFS.FloodFill import FloodFill
+from DataStructure.Stack.DecodeString import DecodeString
 from DynamicProgramming.ClimbingStairs import ClimbingStairs
 from DynamicProgramming.PaintHouse import PaintHouse
 from DynamicProgramming.UniquePaths import UniquePaths
@@ -8,12 +9,14 @@ from MonotonicStack.MaximalRectangle import MaximalRectangle
 from TwoPointer.BullsAndCows import BullsAndCows
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
 from TwoPointer.SlidingWindow.FindAllAnagramsInaString import FindAllAnagramsInaString
+from TwoPointer.SlidingWindow.Heaters import Heaters
 from TwoPointer.SlidingWindow.LongestRepeatingCharacterReplacement import LongestRepeatingCharacterReplacement
 from TwoPointer.SlidingWindow.MinimumWindowSubstring import MinimumWindowSubstring
 from TwoPointer.SlidingWindow.SubstringWithAtLeastKDistinctCharacters import SubstringWithAtLeastKDistinctCharacters
 from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
 from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
 from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
+from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -76,9 +79,9 @@ if __name__ == '__main__':
     # print(p2.find(4))
     # print(p2.find(7))
 
-    p2_1 = BullsAndCows()
-    secret, guess = "1122", "1222"
-    p2_1.getHint(secret, guess)
+    # p2_1 = BullsAndCows()
+    # secret, guess = "1122", "1222"
+    # p2_1.getHint(secret, guess)
 
     # 57. 3Sum
     # p3 = ThreeSum()
@@ -112,6 +115,11 @@ if __name__ == '__main__':
     # p4_5 = MinimumWindowSubstring()
     # source, target = "abc", "ac"
     # print(p4_5.min_window(source, target))
+
+    p4_5_1 = Heaters()
+    houses = [1, 2, 3, 4]
+    heaters = [1, 4]
+    print(p4_5_1.find_radius(houses, heaters))
 
     # p4_6 = FindAllAnagramsInaString()
     # #s, p = "cbaebabacd", "abc"
@@ -412,6 +420,10 @@ if __name__ == '__main__':
     # origin = Point(0, 0)
     # print(p15_2.k_closest(points, origin, 3))
 
+    # p15_3 = DecodeString()
+    # s = "3[a2[c]]"
+    # print(p15_3.decodeString(s))
+
     # p16 = Backpack()
     # m = 10
     # array = [3, 4, 8, 5]
@@ -474,6 +486,10 @@ if __name__ == '__main__':
     # print(p19_1.isValidTree())
     # p19_1.addEdge(3, 5)
     # print(p19_1.isValidTree())
+
+    # p19_2 = MinimumSpanningTree()
+    # connections = [Connection("Acity", "Bcity", 1), Connection("Acity", "Ccity", 2), Connection("Bcity", "Ccity", 3)]
+    # p19_2.lowestCost(connections)
 
     # p20_1 = LongestSquareStreakInAnArray()
     # nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
