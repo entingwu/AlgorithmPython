@@ -1,5 +1,7 @@
 # This is a sample Python script.
+from BFS.ModernLudo import ModernLudo
 from DFS.FloodFill import FloodFill
+from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
 from DynamicProgramming.ClimbingStairs import ClimbingStairs
 from DynamicProgramming.PaintHouse import PaintHouse
@@ -116,10 +118,10 @@ if __name__ == '__main__':
     # source, target = "abc", "ac"
     # print(p4_5.min_window(source, target))
 
-    p4_5_1 = Heaters()
-    houses = [1, 2, 3, 4]
-    heaters = [1, 4]
-    print(p4_5_1.find_radius(houses, heaters))
+    # p4_5_1 = Heaters()
+    # houses = [1, 2, 3, 4]
+    # heaters = [1, 4]
+    # print(p4_5_1.find_radius(houses, heaters))
 
     # p4_6 = FindAllAnagramsInaString()
     # #s, p = "cbaebabacd", "abc"
@@ -210,6 +212,12 @@ if __name__ == '__main__':
     # p8_2 = ZombieInMatrix()
     # grid = [[0,1,2,0,0], [1,0,0,2,1], [0,1,0,0,0]]
     # print(p8_2.zombie(grid))
+
+    # Modern Ludo
+    p8_3 = ModernLudo()
+    length = 15
+    connections = [[2,8], [6,9]]
+    # print(p8_3.modern_ludo(length, connections))
 
     # BinaryTreeVerticalOrderTraversal
     # treeNode3 = TreeNode(3)
@@ -421,8 +429,12 @@ if __name__ == '__main__':
     # print(p15_2.k_closest(points, origin, 3))
 
     # p15_3 = DecodeString()
-    # s = "3[a2[c]]"
+    # s = "3[a2[c]]" #"3[a2[c]]"
     # print(p15_3.decodeString(s))
+
+    p15_4 = LastStoneWeight()
+    stones = [2, 7, 4, 1, 8, 1]
+    print(p15_4.lastStoneWeight(stones))
 
     # p16 = Backpack()
     # m = 10
