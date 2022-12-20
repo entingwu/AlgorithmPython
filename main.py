@@ -1,13 +1,18 @@
 # This is a sample Python script.
+from BFS.BuildPostOffice import BuildPostOffice
 from BFS.ModernLudo import ModernLudo
 from DFS.FloodFill import FloodFill
 from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
+from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
 from DynamicProgramming.ClimbingStairs import ClimbingStairs
 from DynamicProgramming.PaintHouse import PaintHouse
 from DynamicProgramming.UniquePaths import UniquePaths
+from Math.HappyNumber import HappyNumber
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from String.LongestCommonPrefix import LongestCommonPrefix
+from Trie.AddandSearchWord import WordDictionary
 from TwoPointer.BullsAndCows import BullsAndCows
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
 from TwoPointer.SlidingWindow.FindAllAnagramsInaString import FindAllAnagramsInaString
@@ -214,10 +219,14 @@ if __name__ == '__main__':
     # print(p8_2.zombie(grid))
 
     # Modern Ludo
-    p8_3 = ModernLudo()
-    length = 15
-    connections = [[2,8], [6,9]]
+    # p8_3 = ModernLudo()
+    # length = 15
+    # connections = [[7,9]]
     # print(p8_3.modern_ludo(length, connections))
+
+    p8_3_1 = BuildPostOffice()
+    grid = [[0,1,0],[1,1,1],[0,1,0]] # [[0,1,0,0,0],[1,0,0,2,1],[0,1,0,0,0]]
+    print(p8_3_1.shortest_distance(grid))
 
     # BinaryTreeVerticalOrderTraversal
     # treeNode3 = TreeNode(3)
@@ -329,6 +338,11 @@ if __name__ == '__main__':
     # words = ["wrt", "wrf", "er", "ett", "rftt"]
     # print(p9_6.alien_order(words))
 
+    # Trie
+    # p9_7 = WordDictionary()
+    # p9_7.addWord("ad")
+    # print(p9_7.search(".e"))
+
     # DFS
     # Subsets
     # nums = [1, 2]
@@ -386,6 +400,10 @@ if __name__ == '__main__':
     # sr, sc, color = 1, 1, 2
     # print(p13_1.floodFill(image, sr, sc, 2))
 
+    # p13_2 = WhereWillTheBallFall()
+    # grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]
+    # print(p13_2.findBall(grid))
+
     # Memorization
     # p14 = Triangle()
     # triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]
@@ -432,9 +450,9 @@ if __name__ == '__main__':
     # s = "3[a2[c]]" #"3[a2[c]]"
     # print(p15_3.decodeString(s))
 
-    p15_4 = LastStoneWeight()
-    stones = [2, 7, 4, 1, 8, 1]
-    print(p15_4.lastStoneWeight(stones))
+    # p15_4 = LastStoneWeight()
+    # stones = [2, 7, 4, 1, 8, 1]
+    # print(p15_4.lastStoneWeight(stones))
 
     # p16 = Backpack()
     # m = 10
@@ -475,8 +493,14 @@ if __name__ == '__main__':
     # s = 7
     # print(p17_4.minimum_size(nums, s))
 
+    # String
     #p18 = CircularSentence()
     #print(p18.isCircularSentence("eetcoda"))
+
+    p18_0 = LongestCommonPrefix()
+    strs = ["ab","c"] #["flower", "flow", "flight"]
+    print(p18_0.longestCommonPrefix(strs))
+
     # p18_1 = DividePlayersIntoTeamsOfEqualSkill()
     # skill = [3, 2, 5, 1, 3, 4] # [2,1,5,2]
     # print(p18_1.dividePlayers([2, 2, 2, 2]))
@@ -515,5 +539,9 @@ if __name__ == '__main__':
     # p21_2 = MaximalRectangle()
     # matrix = [[1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 0, 1]]
     # print(p21_2.maximal_rectangle(matrix))
+
+    # Math
+    # p22_1 = HappyNumber()
+    # print(p22_1.isHappy(2))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
