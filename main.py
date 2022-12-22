@@ -1,6 +1,8 @@
 # This is a sample Python script.
 from BFS.BuildPostOffice import BuildPostOffice
 from BFS.ModernLudo import ModernLudo
+from BFS.SlidingPuzzle import SlidingPuzzle
+from BFS.TheMaze import TheMaze
 from DFS.FloodFill import FloodFill
 from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
@@ -221,12 +223,23 @@ if __name__ == '__main__':
     # Modern Ludo
     # p8_3 = ModernLudo()
     # length = 15
-    # connections = [[7,9]]
+    # connections = [[6, 9]]
     # print(p8_3.modern_ludo(length, connections))
 
-    p8_3_1 = BuildPostOffice()
-    grid = [[0,1,0],[1,1,1],[0,1,0]] # [[0,1,0,0,0],[1,0,0,2,1],[0,1,0,0,0]]
-    print(p8_3_1.shortest_distance(grid))
+    # p8_3_1 = BuildPostOffice()
+    # grid = [[0,1,0],[1,0,1],[0,1,0]] # [[0,1,0,0,0],[1,0,0,2,1],[0,1,0,0,0]]
+    # print(p8_3_1.shortest_distance(grid))
+
+    # p8_3_2 = TheMaze()
+    # maze = [[0,0,0,0,0],[1,1,0,0,1],[0,0,0,0,0],[0,1,0,0,1],[0,1,0,0,0]]
+    # ball = [4,3]
+    # hole = [0,1]
+    # print(p8_3_2.find_shortest_way(maze, ball, hole))
+
+    # p8_3_3 = SlidingPuzzle()
+    # initial_state = [[2,8,3],[1,0,4],[7,6,5]]
+    # final_state = [[1,2,3], [8,0,4], [7,6,5]]
+    # print(p8_3_3.min_move_step(initial_state, final_state))
 
     # BinaryTreeVerticalOrderTraversal
     # treeNode3 = TreeNode(3)

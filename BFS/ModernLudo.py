@@ -11,7 +11,7 @@ class ModernLudo:
     @return: the minimum steps to reach the end
     """
 
-    def modern_ludo(self, length: int, connections: List[List[int]]) -> int:
+    def modern_ludo2(self, length: int, connections: List[List[int]]) -> int:
         graph = self.build_graph_dp(connections, length)
         # state, initialize
         dp = [float('inf')] * (length + 1) # 0~15, len=15
@@ -61,29 +61,29 @@ class ModernLudo:
 
 
 
-    def modern_ludo2(self, length: int, connections: List[List[int]]) -> int:
+    def modern_ludo(self, length: int, connections: List[List[int]]) -> int:
         graph = self.build_graph(connections, length)
-        print(graph)
         queue = collections.deque([1])
         distance = {1: 0}
 
         while queue:
             node = queue.popleft()
+            print(node)
             # 找最短路径，联通块
             for neighbor in range(node + 1, min(node + 7, length + 1)):
                 connected_nodes = self.get_unvisited_nodes(graph, neighbor, distance)
                 for connected_node in connected_nodes:
                     queue.append(connected_node)
                     distance[connected_node] = distance[node] + 1
-        print(distance)
         return distance[length]
 
     def get_unvisited_nodes(self, graph, start, distance):
         print(distance)
         queue = collections.deque([start])
-        unvisited_nodes = set()
+        unvisited_nodes = set([])
         while queue:
             node = queue.popleft()
+            # 基于初始的那个neighbor没有访问过的前提下做的
             if node in distance:
                 continue
             unvisited_nodes.add(node)

@@ -20,7 +20,7 @@ class BuildPostOffice:
             return -1
         # 空地 => 到所有房子最短距离之和
         distance_sum = collections.defaultdict(int)
-        # 空地 => 可以到达房子总是
+        # 空地 => 可以到达房子总数
         reachable_count = collections.defaultdict(int)
         houses = 0
         for i in range(n):
