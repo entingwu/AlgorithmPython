@@ -4,6 +4,8 @@ from BFS.ModernLudo import ModernLudo
 from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
 from DFS.FloodFill import FloodFill
+from DFS.GenerateParentheses import GenerateParentheses
+from DFS.WordSquares import WordSquares
 from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
 from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
@@ -14,6 +16,8 @@ from Math.HappyNumber import HappyNumber
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaximalRectangle import MaximalRectangle
 from String.LongestCommonPrefix import LongestCommonPrefix
+from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
+from String.TakeKofEachCharacterFromLeftandRight import TakeKofEachCharacterFromLeftandRight
 from Trie.AddandSearchWord import WordDictionary
 from TwoPointer.BullsAndCows import BullsAndCows
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
@@ -417,6 +421,13 @@ if __name__ == '__main__':
     # grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]
     # print(p13_2.findBall(grid))
 
+    # p13_3 = GenerateParentheses()
+    # print(p13_3.generate_parenthesis(2))
+
+    # p13_4 = WordSquares()
+    # words = ["area","lead","wall","lady","ball"]
+    # print(p13_4.word_squares(words))
+
     # Memorization
     # p14 = Triangle()
     # triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]
@@ -556,5 +567,16 @@ if __name__ == '__main__':
     # Math
     # p22_1 = HappyNumber()
     # print(p22_1.isHappy(2))
+
+    # p23_1 = ShortestDistancetoTargetStringinaCircularArray()
+    # words = ["ibkgecmeyx","jsdkekkjsb","gdjgdtjtrs","jsdkekkjsb","jsdkekkjsb","jsdkekkjsb","gdjgdtjtrs","msjlfpawbx","pbgjhutcwb","gdjgdtjtrs"]
+    # target = "pbgjhutcwb"
+    # startIndex = 0
+    # print(p23_1.closetTarget(words, target, startIndex))
+
+    p23_1_1 = TakeKofEachCharacterFromLeftandRight()
+    s = "aabaaaacaabc"
+    k = 2
+    print(p23_1_1.takeCharacters("a", 0))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
