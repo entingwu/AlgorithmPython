@@ -3,13 +3,17 @@ from BFS.BuildPostOffice import BuildPostOffice
 from BFS.ModernLudo import ModernLudo
 from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
+from DFS.EqualTreePartition import EqualTreeParition, TreeNode
 from DFS.FloodFill import FloodFill
 from DFS.GenerateParentheses import GenerateParentheses
+from DFS.SudokuSolver import SudokuSolver
 from DFS.WordSquares import WordSquares
 from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
 from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
 from DynamicProgramming.ClimbingStairs import ClimbingStairs
+from DynamicProgramming.NumberOfWaysToStayInTheSamePlaceAfterSomeSteps import \
+    NumberOfWaysToStayInTheSamePlaceAfterSomeSteps
 from DynamicProgramming.PaintHouse import PaintHouse
 from DynamicProgramming.UniquePaths import UniquePaths
 from Math.HappyNumber import HappyNumber
@@ -428,6 +432,27 @@ if __name__ == '__main__':
     # words = ["area","lead","wall","lady","ball"]
     # print(p13_4.word_squares(words))
 
+    # p13_5 = SudokuSolver()
+    # board = [["5", "3", ".", ".", "7", ".", ".", ".", "."], ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+    #          [".", "9", "8", ".", ".", ".", ".", "6", "."], ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+    #          ["4", ".", ".", "8", ".", "3", ".", ".", "1"], ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+    #          [".", "6", ".", ".", ".", ".", "2", "8", "."], [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+    #          [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+    # p13_5.solveSudoku(board)
+    # print(board)
+
+    # p13_6 = EqualTreeParition()
+    # node1 = TreeNode(5)
+    # node2 = TreeNode(10)
+    # node3 = TreeNode(-10)
+    # node4 = TreeNode(-2)
+    # node5 = TreeNode(-3)
+    # node1.left = node2
+    # node1.right = node3
+    # node3.left = node4
+    # node3.right = node5
+    # print(p13_6.check_equal_tree(node1))
+
     # Memorization
     # p14 = Triangle()
     # triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]
@@ -497,6 +522,9 @@ if __name__ == '__main__':
     # p16_4 = UniquePaths()
     # print(p16_4.uniquePaths(3, 7))
 
+    # p16_5 = NumberOfWaysToStayInTheSamePlaceAfterSomeSteps()
+    # print(p16_5.num_ways(3, 2))
+
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
     # nums = [3, 1, -1, 5, 7] #[2, 1, -1, 4, 2, -3]
@@ -521,9 +549,9 @@ if __name__ == '__main__':
     #p18 = CircularSentence()
     #print(p18.isCircularSentence("eetcoda"))
 
-    p18_0 = LongestCommonPrefix()
-    strs = ["ab","c"] #["flower", "flow", "flight"]
-    print(p18_0.longestCommonPrefix(strs))
+    # p18_0 = LongestCommonPrefix()
+    # strs = ["ab","c"] #["flower", "flow", "flight"]
+    # print(p18_0.longestCommonPrefix(strs))
 
     # p18_1 = DividePlayersIntoTeamsOfEqualSkill()
     # skill = [3, 2, 5, 1, 3, 4] # [2,1,5,2]
@@ -574,9 +602,9 @@ if __name__ == '__main__':
     # startIndex = 0
     # print(p23_1.closetTarget(words, target, startIndex))
 
-    p23_1_1 = TakeKofEachCharacterFromLeftandRight()
-    s = "aabaaaacaabc"
-    k = 2
-    print(p23_1_1.takeCharacters("a", 0))
+    # p23_1_1 = TakeKofEachCharacterFromLeftandRight()
+    # s = "aabaaaacaabc"
+    # k = 2
+    # print(p23_1_1.takeCharacters("a", 0))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
