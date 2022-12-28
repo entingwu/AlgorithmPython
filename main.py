@@ -1,8 +1,10 @@
 # This is a sample Python script.
 from BFS.BuildPostOffice import BuildPostOffice
 from BFS.ModernLudo import ModernLudo
+from BFS.RottenOranges import RottenOranges
 from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
+from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
 from DFS.EqualTreePartition import EqualTreeParition, TreeNode
 from DFS.FloodFill import FloodFill
 from DFS.GenerateParentheses import GenerateParentheses
@@ -12,6 +14,7 @@ from DataStructure.Heap.LastStoneWeight import LastStoneWeight
 from DataStructure.Stack.DecodeString import DecodeString
 from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
 from DynamicProgramming.ClimbingStairs import ClimbingStairs
+from DynamicProgramming.DistinctSubsequences import DistinctSubsequences
 from DynamicProgramming.NumberOfWaysToStayInTheSamePlaceAfterSomeSteps import \
     NumberOfWaysToStayInTheSamePlaceAfterSomeSteps
 from DynamicProgramming.PaintHouse import PaintHouse
@@ -249,6 +252,12 @@ if __name__ == '__main__':
     # final_state = [[1,2,3], [8,0,4], [7,6,5]]
     # print(p8_3_3.min_move_step(initial_state, final_state))
 
+    # p8_3_4 = RottenOranges()
+    # grid = [[2, 1, 1], [1, 1, 0], [0, 1, 1]]
+    #     # [[0]]
+    #     # [[2,1,1],[0,1,1],[1,0,1]]
+    # print(p8_3_4.orangesRotting(grid))
+
     # BinaryTreeVerticalOrderTraversal
     # treeNode3 = TreeNode(3)
     # treeNode9 = TreeNode(9)
@@ -453,6 +462,11 @@ if __name__ == '__main__':
     # node3.right = node5
     # print(p13_6.check_equal_tree(node1))
 
+    p13_7 = CriticalConnectionInANetwork()
+    n = 4
+    connections = [[0,1],[1,2],[2,0],[1,3]]
+    print(p13_7.criticalConnections(n, connections))
+
     # Memorization
     # p14 = Triangle()
     # triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]
@@ -524,6 +538,10 @@ if __name__ == '__main__':
 
     # p16_5 = NumberOfWaysToStayInTheSamePlaceAfterSomeSteps()
     # print(p16_5.num_ways(3, 2))
+
+    # p16_6 = DistinctSubsequences()
+    # s = "abbacb"
+    # print(p16_6.distinct_subseq_i_i(s))
 
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
