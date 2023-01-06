@@ -13,6 +13,7 @@ from DFS.PacificAtlanticWaterFlow import PacificAtlanticWaterFlow
 from DFS.SudokuSolver import SudokuSolver
 from DFS.WordSquares import WordSquares
 from DataStructure.Heap.LastStoneWeight import LastStoneWeight
+from DataStructure.Stack.BasicCalculator import BasicCalculator
 from DataStructure.Stack.DecodeString import DecodeString
 from DataStructure.TaskScheduler import TaskScheduler
 from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
@@ -41,9 +42,11 @@ from TwoPointer.SlidingWindow.LongestRepeatingCharacterReplacement import Longes
 from TwoPointer.SlidingWindow.MinimumWindowSubstring import MinimumWindowSubstring
 from TwoPointer.SlidingWindow.SubstringWithAtLeastKDistinctCharacters import SubstringWithAtLeastKDistinctCharacters
 from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
+from TwoPointer.SweepLine.InsertInterval import InsertInterval
 from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
 from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
 from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
+from UnionFind.NumberOfProvinces import NumberOfProvinces
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -162,6 +165,11 @@ if __name__ == '__main__':
     # intervals = [Interval(2,3), Interval(0,1), Interval(1,2), Interval(3,4), Interval(4,5), Interval(1,1), Interval(0,1),
     #              Interval(4,6), Interval(5,7), Interval(1,1), Interval(3,5)]
     # print(p4_6.merge(intervals))
+
+    # p4_6_1 = InsertInterval()
+    # intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]]
+    # newInterval = [4,8]
+    # print(p4_6_1.insert(intervals, newInterval))
 
     # p4_7 = MeetingRooms()
     # intervals = [Interval(1,3), Interval(3,4)]
@@ -540,6 +548,10 @@ if __name__ == '__main__':
     # s = "3[a2[c]]" #"3[a2[c]]"
     # print(p15_3.decodeString(s))
 
+    p15_3_1 = BasicCalculator()
+    s = "14-3/2"
+    print(p15_3_1.calculate(s))
+
     # p15_4 = LastStoneWeight()
     # stones = [2, 7, 4, 1, 8, 1]
     # print(p15_4.lastStoneWeight(stones))
@@ -584,9 +596,9 @@ if __name__ == '__main__':
     # amount = 0
     # print(p16_7.coinChange(coins, amount))
 
-    p16_8 = CountSquareSubmatricsWithAllOnes()
-    matrix = [[0,1,1,1], [1,1,1,1], [0,1,1,1]]
-    print(p16_8.countSquares(matrix))
+    # p16_8 = CountSquareSubmatricsWithAllOnes()
+    # matrix = [[0,1,1,1], [1,1,1,1], [0,1,1,1]]
+    # print(p16_8.countSquares(matrix))
 
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
@@ -641,6 +653,10 @@ if __name__ == '__main__':
     # p19_2 = MinimumSpanningTree()
     # connections = [Connection("Acity", "Bcity", 1), Connection("Acity", "Ccity", 2), Connection("Bcity", "Ccity", 3)]
     # p19_2.lowestCost(connections)
+
+    # p19_3 = NumberOfProvinces()
+    # isConnected = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]
+    # print(p19_3.findCircleNum(isConnected))
 
     # p20_1 = LongestSquareStreakInAnArray()
     # nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
