@@ -1,6 +1,7 @@
 # This is a sample Python script.
 from BFS.BuildPostOffice import BuildPostOffice
 from BFS.ModernLudo import ModernLudo
+from BFS.NumberOfIslands import NumberOfIslands
 from BFS.RottenOranges import RottenOranges
 from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
@@ -21,14 +22,17 @@ from DynamicProgramming.ClimbingStairs import ClimbingStairs
 from DynamicProgramming.CoinChange import CoinChange
 from DynamicProgramming.CountSquareSubmatricesWithAllOnes import CountSquareSubmatricsWithAllOnes
 from DynamicProgramming.DistinctSubsequences import DistinctSubsequences
+from DynamicProgramming.MaximumProductSubarray import MaximumProductSubarray
 from DynamicProgramming.NumberOfWaysToStayInTheSamePlaceAfterSomeSteps import \
     NumberOfWaysToStayInTheSamePlaceAfterSomeSteps
 from DynamicProgramming.PaintHouse import PaintHouse
 from DynamicProgramming.PartitionEqualSubsetSum import PartitionEqualSubsetSum
 from DynamicProgramming.UniquePaths import UniquePaths
 from Math.HappyNumber import HappyNumber
+from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueAfterReplacingWithSumOfPrimeFactors
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from String.GroupAnagrams import GroupAnagrams
 from String.LongestCommonPrefix import LongestCommonPrefix
 from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
 from String.TakeKofEachCharacterFromLeftandRight import TakeKofEachCharacterFromLeftandRight
@@ -45,7 +49,10 @@ from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
 from TwoPointer.SweepLine.InsertInterval import InsertInterval
 from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
 from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
+from UnionFind.AccountMerge import AccountMerge
+from UnionFind.BricksFallingWhenHit import BricksFallingWhenHit
 from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
+from UnionFind.MostStonesRemovedWithSameRowOrColumn import MostStonesRemoveWithSameRowOrColumn
 from UnionFind.NumberOfProvinces import NumberOfProvinces
 
 # Press ⌃R to execute it or replace it with your code.
@@ -239,7 +246,21 @@ if __name__ == '__main__':
     #     [0, 0, 0, 0, 1]
     # ]
     # p8_1 = NumberOfIslands()
-    # print(p8_1.num_islands(grid))
+    # # print(p8_1.num_islands(grid))
+    # m, n = 3, 3
+    # positions = [[0, 0], [0, 1], [1, 2], [2, 1]]
+    # print(p8_1.numIslands2(m, n, positions))
+
+    # p8_1_1 = BricksFallingWhenHit()
+    # grid = [[1, 1, 0, 0], [1, 1, 1, 0]]
+    # hits = [[1, 0], [1, 1], [0, 1], [1, 2]]
+    # print(p8_1_1.hitBricks(grid, hits))
+
+    p8_1_2 = AccountMerge()
+    accounts = [["John", "johnsmith@mail.com", "john_newyork@mail.com"],
+                ["John", "johnsmith@mail.com", "john00@mail.com"],
+                ["Mary", "mary@mail.com"], ["John", "johnnybravo@mail.com"]]
+    print(p8_1_2.accountsMerge(accounts))
 
     # Zombie in Matrix
     # p8_2 = ZombieInMatrix()
@@ -548,9 +569,9 @@ if __name__ == '__main__':
     # s = "3[a2[c]]" #"3[a2[c]]"
     # print(p15_3.decodeString(s))
 
-    p15_3_1 = BasicCalculator()
-    s = "14-3/2"
-    print(p15_3_1.calculate(s))
+    # p15_3_1 = BasicCalculator()
+    # s = "14-3/2"
+    # print(p15_3_1.calculate(s))
 
     # p15_4 = LastStoneWeight()
     # stones = [2, 7, 4, 1, 8, 1]
@@ -600,6 +621,10 @@ if __name__ == '__main__':
     # matrix = [[0,1,1,1], [1,1,1,1], [0,1,1,1]]
     # print(p16_8.countSquares(matrix))
 
+    # p16_9 = MaximumProductSubarray()
+    # nums = [2, 3, -2, 4]
+    # print(p16_9.maxProduct(nums))
+
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
     # nums = [3, 1, -1, 5, 7] #[2, 1, -1, 4, 2, -3]
@@ -637,6 +662,10 @@ if __name__ == '__main__':
     # n = 4
     # print(p18_2.minScore(n, roads))
 
+    # p18_3 = GroupAnagrams()
+    # strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    # print(p18_3.groupAnagrams(strs))
+
     # Union Find
     # p19_1 = GraphValidTree()
     # edges = [[1,2], [1,3], [2,3]]
@@ -658,6 +687,11 @@ if __name__ == '__main__':
     # isConnected = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]
     # print(p19_3.findCircleNum(isConnected))
 
+    # p19_4 = MostStonesRemoveWithSameRowOrColumn()
+    # stones = [[0, 0], [0, 1], [1, 0], [1, 2], [2, 1], [2, 2]]
+    # # [[0,1],[1,0]]
+    # print(p19_4.removeStones(stones))
+
     # p20_1 = LongestSquareStreakInAnArray()
     # nums =  [4,3,6,16,8,2] # [2, 3, 5, 6, 7]
     # print(p20_1.longestSquareStreak(nums))
@@ -674,6 +708,11 @@ if __name__ == '__main__':
     # Math
     # p22_1 = HappyNumber()
     # print(p22_1.isHappy(2))
+
+    # p22_2 = SmallestValueAfterReplacingWithSumOfPrimeFactors()
+    # n = 15
+    # print(p22_2.smallestValue(n))
+
 
     # p23_1 = ShortestDistancetoTargetStringinaCircularArray()
     # words = ["ibkgecmeyx","jsdkekkjsb","gdjgdtjtrs","jsdkekkjsb","jsdkekkjsb","jsdkekkjsb","gdjgdtjtrs","msjlfpawbx","pbgjhutcwb","gdjgdtjtrs"]
