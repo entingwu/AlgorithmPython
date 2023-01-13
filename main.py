@@ -51,6 +51,7 @@ from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
 from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
 from UnionFind.AccountMerge import AccountMerge
 from UnionFind.BricksFallingWhenHit import BricksFallingWhenHit
+from UnionFind.MaximumAssociationSet import MaximumAssociationSet
 from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
 from UnionFind.MostStonesRemovedWithSameRowOrColumn import MostStonesRemoveWithSameRowOrColumn
 from UnionFind.NumberOfProvinces import NumberOfProvinces
@@ -256,11 +257,16 @@ if __name__ == '__main__':
     # hits = [[1, 0], [1, 1], [0, 1], [1, 2]]
     # print(p8_1_1.hitBricks(grid, hits))
 
-    p8_1_2 = AccountMerge()
-    accounts = [["John", "johnsmith@mail.com", "john_newyork@mail.com"],
-                ["John", "johnsmith@mail.com", "john00@mail.com"],
-                ["Mary", "mary@mail.com"], ["John", "johnnybravo@mail.com"]]
-    print(p8_1_2.accountsMerge(accounts))
+    # p8_1_2 = AccountMerge()
+    # accounts = [["John", "johnsmith@mail.com", "john_newyork@mail.com"],
+    #             ["John", "johnsmith@mail.com", "john00@mail.com"],
+    #             ["Mary", "mary@mail.com"], ["John", "johnnybravo@mail.com"]]
+    # print(p8_1_2.accountsMerge(accounts))
+
+    p8_1_3 = MaximumAssociationSet()
+    ListA = ["a","b","d","e","f"]
+    ListB = ["b","c","e","g","g"]
+    print(p8_1_3.maximum_association_set(ListA, ListB))
 
     # Zombie in Matrix
     # p8_2 = ZombieInMatrix()
