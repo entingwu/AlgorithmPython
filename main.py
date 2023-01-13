@@ -10,6 +10,7 @@ from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
 from DFS.EqualTreePartition import EqualTreeParition
 from DFS.FloodFill import FloodFill
 from DFS.GenerateParentheses import GenerateParentheses
+from DFS.MaxAreaOfIsland import MaxAreaOfIsland
 from DFS.PacificAtlanticWaterFlow import PacificAtlanticWaterFlow
 from DFS.SudokuSolver import SudokuSolver
 from DFS.WordSquares import WordSquares
@@ -32,6 +33,8 @@ from Math.HappyNumber import HappyNumber
 from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueAfterReplacingWithSumOfPrimeFactors
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from NextDoor.IdenticalHashmap import IdenticalHashmap
+from NextDoor.ProcessComments import ProcessComments, Comment
 from String.GroupAnagrams import GroupAnagrams
 from String.LongestCommonPrefix import LongestCommonPrefix
 from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
@@ -263,10 +266,10 @@ if __name__ == '__main__':
     #             ["Mary", "mary@mail.com"], ["John", "johnnybravo@mail.com"]]
     # print(p8_1_2.accountsMerge(accounts))
 
-    p8_1_3 = MaximumAssociationSet()
-    ListA = ["a","b","d","e","f"]
-    ListB = ["b","c","e","g","g"]
-    print(p8_1_3.maximum_association_set(ListA, ListB))
+    # p8_1_3 = MaximumAssociationSet()
+    # ListA = ["a","b","d","e","f"]
+    # ListB = ["b","c","e","g","g"]
+    # print(p8_1_3.maximum_association_set(ListA, ListB))
 
     # Zombie in Matrix
     # p8_2 = ZombieInMatrix()
@@ -730,5 +733,24 @@ if __name__ == '__main__':
     # s = "aabaaaacaabc"
     # k = 2
     # print(p23_1_1.takeCharacters("a", 0))
+
+    # NEXT DOOR
+    # p100 = ProcessComments()
+    # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
+    # comment_nodes = p100.flat_to_tree(comments)
+    # p100.print_tree(comment_nodes)
+
+    # p100_1 = IdenticalHashmap()
+    #print(p100_1.are_identical({'k': 1}, {'k': 1}))
+    #print(p100_1.are_identical({'k': {'nk': None}}, {'k': {'nk': None}}))
+    #print(p100_1.are_identical({'k': 1}, {'k': 1, 'k2': 2}))
+    #print(p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}}))
+    # print(p100_1.are_identical({'k': {'nk': 1}, 'k2': 2}, {'k': {'nk': 1}}))
+
+    p100_2 = MaxAreaOfIsland()
+    grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
+    #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+    print(p100_2.maxAreaOfIsland(grid))
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
