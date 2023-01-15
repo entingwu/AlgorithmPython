@@ -41,6 +41,8 @@ from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistan
 from String.TakeKofEachCharacterFromLeftandRight import TakeKofEachCharacterFromLeftandRight
 from Trie.AddandSearchWord import WordDictionary
 from Trie.IdentifyingStrings import IdentifyingStrings
+from Trie.WordSearchTrie import WordSearchTrie
+from Trie.WordSquaresTrie import WordSquaresTrie
 from TwoPointer.BullsAndCows import BullsAndCows
 from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
 from TwoPointer.SlidingWindow.FindAllAnagramsInaString import FindAllAnagramsInaString
@@ -433,6 +435,23 @@ if __name__ == '__main__':
     #     #["aa", "aaaa"]
     # print(p9_8.short_perfix(string_array))
 
+    p9_9 = WordSearchTrie()
+    #boards1 = [["o","t","a","e"],["a","h","k","r"],["a","f","l","v"]]
+    #words1 = ["oa","oaa"]
+    # boards = [["a", "t"], ["c", "d"]]
+    # words = ["cat", "at"]
+    # boards = [["b","a","b","b","a"]]
+    # words = ["babbab","b","a","ba"]
+    # boards = [["d","o", "a","f"], ["a", "g", "a", "i"], ["d", "c", "a", "n"]]
+    # words = ["dog", "dad", "dgdg", "can", "again"]
+    # boards = [["a", "d", "c", "e"], ["s", "f", "c", "s"], ["a", "d", "e", "e"]]
+    # words = ["as", "ab", "cf", "da", "ee", "e", "adee", "eeda"]
+    # print(p9_9.word_search_i_i_i(boards, words))
+
+    p9_10 = WordSquaresTrie()
+    words = ["area", "lead", "wall", "lady", "ball"]
+    print(p9_10.wordSquares(words))
+
     # DFS
     # Subsets
     # nums = [1, 2]
@@ -747,10 +766,10 @@ if __name__ == '__main__':
     #print(p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}}))
     # print(p100_1.are_identical({'k': {'nk': 1}, 'k2': 2}, {'k': {'nk': 1}}))
 
-    p100_2 = MaxAreaOfIsland()
-    grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
-    #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
-    print(p100_2.maxAreaOfIsland(grid))
+    # p100_2 = MaxAreaOfIsland()
+    # grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
+    # #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+    # print(p100_2.maxAreaOfIsland(grid))
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
