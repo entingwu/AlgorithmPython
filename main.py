@@ -32,9 +32,11 @@ from DynamicProgramming.UniquePaths import UniquePaths
 from Math.HappyNumber import HappyNumber
 from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueAfterReplacingWithSumOfPrimeFactors
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
+from MonotonicStack.MaxTree import MaxTree
 from MonotonicStack.MaximalRectangle import MaximalRectangle
 from NextDoor.IdenticalHashmap import IdenticalHashmap
 from NextDoor.ProcessComments import ProcessComments, Comment
+from NextDoor.RangeSplit import RangeSplit
 from String.GroupAnagrams import GroupAnagrams
 from String.LongestCommonPrefix import LongestCommonPrefix
 from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
@@ -448,9 +450,9 @@ if __name__ == '__main__':
     # words = ["as", "ab", "cf", "da", "ee", "e", "adee", "eeda"]
     # print(p9_9.word_search_i_i_i(boards, words))
 
-    p9_10 = WordSquaresTrie()
-    words = ["area", "lead", "wall", "lady", "ball"]
-    print(p9_10.wordSquares(words))
+    # p9_10 = WordSquaresTrie()
+    # words = ["area", "lead", "wall", "lady", "ball"]
+    # print(p9_10.wordSquares(words))
 
     # DFS
     # Subsets
@@ -733,6 +735,10 @@ if __name__ == '__main__':
     # matrix = [[1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 0, 1]]
     # print(p21_2.maximal_rectangle(matrix))
 
+    p21_3 = MaxTree()
+    A = [2, 5, 6, 0, 3, 1]
+    p21_3.max_tree(A)
+
     # Math
     # p22_1 = HappyNumber()
     # print(p22_1.isHappy(2))
@@ -770,6 +776,16 @@ if __name__ == '__main__':
     # grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
     # #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
     # print(p100_2.maxAreaOfIsland(grid))
+
+    # p100_3 = RangeSplit()
+    # nums = [1,2,0,4,6,7,0,9,0]
+    # nums1 = [1, 0 ,1]
+    # nums2 = [1, 0, 2, 3, 0, 4]
+    # #print(p100_3.split_range(nums2))
+    # # print(p100_3.find_range(nums, 1))
+    # # print(p100_3.find_range(nums, 4))
+    # # print(p100_3.find_range(nums, 7))
+    # print(p100_3.split_index_to_range(nums2))
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
