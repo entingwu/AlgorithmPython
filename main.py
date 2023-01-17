@@ -34,7 +34,9 @@ from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueA
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaxTree import MaxTree
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from NextDoor.FindWinnerOnTicTacToeGame import FindWinnerOnTicTacToeGame
 from NextDoor.IdenticalHashmap import IdenticalHashmap
+from NextDoor.OverlapDuration import OverlapDuration
 from NextDoor.ProcessComments import ProcessComments, Comment
 from NextDoor.RangeSplit import RangeSplit
 from String.GroupAnagrams import GroupAnagrams
@@ -735,9 +737,9 @@ if __name__ == '__main__':
     # matrix = [[1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 0, 1]]
     # print(p21_2.maximal_rectangle(matrix))
 
-    p21_3 = MaxTree()
-    A = [2, 5, 6, 0, 3, 1]
-    p21_3.max_tree(A)
+    # p21_3 = MaxTree()
+    # A = [2, 5, 6, 0, 3, 1]
+    # p21_3.max_tree(A)
 
     # Math
     # p22_1 = HappyNumber()
@@ -787,5 +789,15 @@ if __name__ == '__main__':
     # # print(p100_3.find_range(nums, 7))
     # print(p100_3.split_index_to_range(nums2))
 
+    # p100_4 = OverlapDuration()
+    # intervals = [[1, 6], [5, 10]]
+    # print(p100_4.find_overlap(intervals))
+    # customer_intervals = [[1,5], [8,12], [12,14]]
+    # busy_time = [10,15]
+    # print(p100_4.busy_time_window(customer_intervals, busy_time))
+
+    p100_5 = FindWinnerOnTicTacToeGame()
+    moves = [[0, 0], [2, 0], [1, 1], [2, 1], [2, 2]]
+    print(p100_5.tictactoe(moves))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
