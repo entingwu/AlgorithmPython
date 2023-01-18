@@ -1,10 +1,12 @@
 # This is a sample Python script.
 from BFS.BuildPostOffice import BuildPostOffice
+from BFS.MaximumWidthOfBinaryTree import MaximumWidthOfBinaryTree
 from BFS.ModernLudo import ModernLudo
 from BFS.NumberOfIslands import NumberOfIslands
 from BFS.RottenOranges import RottenOranges
 from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
+from BFS.TopologicalSort.MinimumHeightTrees import MinimumHeightTrees
 from BinaryTree.BinaryTreeRightSideView import BinaryTreeRightSideView, TreeNode
 from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
 from DFS.EqualTreePartition import EqualTreeParition
@@ -35,6 +37,7 @@ from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogra
 from MonotonicStack.MaxTree import MaxTree
 from MonotonicStack.MaximalRectangle import MaximalRectangle
 from NextDoor.FindWinnerOnTicTacToeGame import FindWinnerOnTicTacToeGame
+from NextDoor.FlattenNestedListIterator import NestedIterator
 from NextDoor.IdenticalHashmap import IdenticalHashmap
 from NextDoor.OverlapDuration import OverlapDuration
 from NextDoor.ProcessComments import ProcessComments, Comment
@@ -227,12 +230,15 @@ if __name__ == '__main__':
     # treeNode2 = TreeNode(2)
     # treeNode3 = TreeNode(3)
     # treeNode5 = TreeNode(5)
-    # treeNode1.left = treeNode2
-    # treeNode1.right = treeNode3
-    # treeNode2.right = treeNode5
+    # treeNode1.left = treeNode3
+    # treeNode1.right = treeNode2
+    # treeNode3.left = treeNode5
     # p7 = BinaryTreePaths()
     # paths = p7.binary_tree_paths2(treeNode1)
     # print(paths)
+
+    # p7_1 = MaximumWidthOfBinaryTree()
+    # print(p7_1.widthOfBinaryTree(treeNode1))
 
     # CloneGraph
     # graphNode1 = UndirectedGraphNode(1)
@@ -351,6 +357,11 @@ if __name__ == '__main__':
     # org = [1, 2, 3]
     # seqs = [[1,2], [1,3], [2,3]]
     # p9_1_3_2.sequence_reconstruction(org, seqs)
+
+    p9_1_3_3 = MinimumHeightTrees()
+    edges = [[1, 0], [1, 2], [1, 3]]
+    n = 4
+    print(p9_1_3_3.findMinHeightTrees(n, edges))
 
     # p9_1_4 = WordLadder()
     # dict = {"hot", "dot", "dog", "lot", "log"}
@@ -761,6 +772,7 @@ if __name__ == '__main__':
     # k = 2
     # print(p23_1_1.takeCharacters("a", 0))
 
+
     # NEXT DOOR
     # p100 = ProcessComments()
     # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
@@ -796,8 +808,14 @@ if __name__ == '__main__':
     # busy_time = [10,15]
     # print(p100_4.busy_time_window(customer_intervals, busy_time))
 
-    p100_5 = FindWinnerOnTicTacToeGame()
-    moves = [[0, 0], [2, 0], [1, 1], [2, 1], [2, 2]]
-    print(p100_5.tictactoe(moves))
+    # p100_5 = FindWinnerOnTicTacToeGame()
+    # moves = [[0, 0], [2, 0], [1, 1], [2, 1], [2, 2]]
+    # print(p100_5.tictactoe(moves))
+
+    # p100_6 = NestedIterator()
+    # nestedList = [[1, 1], 2, [1, 1]]
+    # result = []
+    # p100_6.parseNestedList(nestedList, result)
+    # print(result)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
