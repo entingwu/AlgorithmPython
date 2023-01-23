@@ -29,6 +29,7 @@ class RangeSplit:
         if not nums or nums[k] == 0:
             return None
         ranges = self.split_range(nums)
+        print("@", ranges)
         start, end = 0, len(ranges) - 1
         while start + 1 < end:
             mid = (start + end) // 2

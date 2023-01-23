@@ -21,25 +21,22 @@ class ProcessComments:
         print(graph)
 
         results = []
-        visited = set()
         for comment in comments:
             if comment.parent_id is None: # root
-                root = self.dfs(graph, comment, id_to_comment, visited)
+                root = self.dfs(graph, comment, id_to_comment)
                 results.append(root)
         return results
 
     # Return the CommentNode which id is node.id, children is List[CommentNode]
-    def dfs(self, graph, node, id_to_comment, visited) -> CommentNode:
-        visited.add(node.id)
+    def dfs(self, graph, node, id_to_comment) -> CommentNode:
         if node.id not in graph: # leaf
             return CommentNode(node.id)
 
         children = set()
         for neighbor_id in graph[node.id]:
             neighbor = id_to_comment[neighbor_id]
-            if neighbor.id not in visited:
-                child = self.dfs(graph, neighbor, id_to_comment, visited)
-                children.add(child)
+            child = self.dfs(graph, neighbor, id_to_comment)
+            children.add(child)
         return CommentNode(node.id, list(children))
 
     def print_tree(self, comment_nodes: List[CommentNode]):
@@ -74,3 +71,18 @@ class ProcessComments:
         for parent_id, ids in parentToChildren.items():
             results.append(CommentNode(parent_id, ids))
         return results
+
+    def print_tree2(self, comment_nodes: List[CommentNode]):
+        queue = collections.deque(comment_nodes)
+        visited = set()
+        while queue:
+            node = queue.popleft()
+            print("%s" % node.id + " ")
+            if node.children is None:
+                print("#")
+            else:
+                for neighbor in node.children:
+                    if neighbor in visited:
+                        continue
+                    queue.append(neighbor)
+                    visited.add(node)

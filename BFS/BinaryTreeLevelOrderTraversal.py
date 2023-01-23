@@ -1,4 +1,4 @@
-# Definition for a binary tree node.
+ # Definition for a binary tree node.
 import collections
 
 class TreeNode:

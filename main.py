@@ -792,10 +792,10 @@ if __name__ == '__main__':
 
 
     # NEXT DOOR
-    p100 = ProcessComments()
-    comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
-    comment_nodes = p100.flat_to_tree(comments)
-    p100.print_tree(comment_nodes)
+    # p100 = ProcessComments()
+    # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
+    # comment_nodes = p100.flat_to_tree(comments)
+    # p100.print_tree(comment_nodes)
 
     # p100_1 = IdenticalHashmap()
     #print(p100_1.are_identical({'k': 1}, {'k': 1}))
@@ -809,15 +809,15 @@ if __name__ == '__main__':
     # #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
     # print(p100_2.maxAreaOfIsland(grid))
 
-    # p100_3 = RangeSplit()
-    # nums = [1,2,0,4,6,7,0,9,0]
-    # nums1 = [1, 0 ,1]
-    # nums2 = [1, 0, 2, 3, 0, 4]
-    # #print(p100_3.split_range(nums2))
-    # # print(p100_3.find_range(nums, 1))
-    # # print(p100_3.find_range(nums, 4))
-    # # print(p100_3.find_range(nums, 7))
-    # print(p100_3.split_index_to_range(nums2))
+    p100_3 = RangeSplit()
+    nums = [1,2,0,4,6,7,0,9,0]
+    nums1 = [1, 0, 1]
+    nums2 = [1, 0, 2, 3, 0, 4]
+    #print(p100_3.split_range(nums2))
+    # print(p100_3.find_range(nums, 1))
+    # print(p100_3.find_range(nums, 4))
+    print(p100_3.find_range(nums2, 2))
+    #print(p100_3.split_index_to_range(nums2))
 
     # p100_4 = OverlapDuration()
     # intervals = [[1, 6], [5, 10]]
@@ -850,6 +850,6 @@ if __name__ == '__main__':
         ],
         "request_id": "1234",
      }
-    print(p100_7.convert_snake_to_camel(msg))
+    #print(p100_7.convert_snake_to_camel(msg))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
