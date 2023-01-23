@@ -11,6 +11,38 @@ class MinimumWindowSubstring:
         len_s, len_t = len(source), len(target)
         if len_s == 0 or len_t == 0:
             return ""
+        counter_t = collections.defaultdict(int)
+        for ch in target:
+            counter_t[ch] += 1
+
+        left, count = 0, 0
+        min_start, min_len = 0, float('inf')
+        for i in range(len_s):
+            curr = source[i]
+            if curr in counter_t:
+                if counter_t[curr] > 0:
+                    count += 1 # valid count
+                counter_t[curr] -= 1
+            while count == len_t:
+                if i - left + 1 < min_len:
+                    min_len = i - left + 1
+                    min_start = left
+                l_ch = source[left]
+                if l_ch in counter_t:
+                    counter_t[l_ch] += 1 # to be filled
+                    if counter_t[l_ch] > 0: # 2B, -1 no need to substract
+                        count -= 1 # have found
+                left += 1
+
+        if min_len == float('inf'):
+            return ""
+        return source[min_start: min_start + min_len]
+
+
+    def min_window2(self, source: str, target: str) -> str:
+        len_s, len_t = len(source), len(target)
+        if len_s == 0 or len_t == 0:
+            return ""
         counter_s = collections.defaultdict(int)
         counter_t = collections.defaultdict(int)
         for char in target:
@@ -48,7 +80,7 @@ class MinimumWindowSubstring:
             return ""
         return source[start: start + substr_len]
 
-
+    # RIGHT
     def min_window1(self, source: str, target: str) -> str:
         len_s, len_t = len(source), len(target)
         counter_s = collections.defaultdict(int)

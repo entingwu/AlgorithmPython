@@ -37,6 +37,7 @@ from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueA
 from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
 from MonotonicStack.MaxTree import MaxTree
 from MonotonicStack.MaximalRectangle import MaximalRectangle
+from NextDoor.ConvertJson import ConvertJson
 from NextDoor.FindWinnerOnTicTacToeGame import FindWinnerOnTicTacToeGame
 from NextDoor.FlattenNestedListIterator import NestedIterator
 from NextDoor.IdenticalHashmap import IdenticalHashmap
@@ -165,7 +166,9 @@ if __name__ == '__main__':
     # print(p4_4.k_distinct_characters(S, k))
 
     # p4_5 = MinimumWindowSubstring()
-    # source, target = "abc", "ac"
+    # source = "ADOBECODEBANC"
+    # target = "ABC"
+    # #source, target = "abc", "ac"
     # print(p4_5.min_window(source, target))
 
     # p4_5_1 = Heaters()
@@ -360,12 +363,12 @@ if __name__ == '__main__':
     # seqs = [[1,2], [1,3], [2,3]]
     # p9_1_3_2.sequence_reconstruction(org, seqs)
 
-    p9_1_3_3 = MinimumHeightTrees()
-    edges = [[1, 0], [1, 2], [1, 3]]
-    n = 4
-    # n = 6
-    # edges = [[3, 0], [3, 1], [3, 2], [3, 4], [5, 4]]
-    print(p9_1_3_3.findMinHeightTrees(n, edges))
+    # p9_1_3_3 = MinimumHeightTrees()
+    # edges = [[1, 0], [1, 2], [1, 3]]
+    # n = 4
+    # # n = 6
+    # # edges = [[3, 0], [3, 1], [3, 2], [3, 4], [5, 4]]
+    # print(p9_1_3_3.findMinHeightTrees(n, edges))
 
     # p9_1_4 = WordLadder()
     # dict = {"hot", "dot", "dog", "lot", "log"}
@@ -454,7 +457,7 @@ if __name__ == '__main__':
     #     #["aa", "aaaa"]
     # print(p9_8.short_perfix(string_array))
 
-    p9_9 = WordSearchTrie()
+    #p9_9 = WordSearchTrie()
     #boards1 = [["o","t","a","e"],["a","h","k","r"],["a","f","l","v"]]
     #words1 = ["oa","oaa"]
     # boards = [["a", "t"], ["c", "d"]]
@@ -789,10 +792,10 @@ if __name__ == '__main__':
 
 
     # NEXT DOOR
-    # p100 = ProcessComments()
-    # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
-    # comment_nodes = p100.flat_to_tree(comments)
-    # p100.print_tree(comment_nodes)
+    p100 = ProcessComments()
+    comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
+    comment_nodes = p100.flat_to_tree(comments)
+    p100.print_tree(comment_nodes)
 
     # p100_1 = IdenticalHashmap()
     #print(p100_1.are_identical({'k': 1}, {'k': 1}))
@@ -832,5 +835,21 @@ if __name__ == '__main__':
     # result = []
     # p100_6.parseNestedList(nestedList, result)
     # print(result)
+
+    p100_7 = ConvertJson()
+    msg = {
+        "validation_errors": [
+           {
+               "first_name": "christy",
+               "description_msg": "required",
+           },
+           {
+               "last_name": "wu",
+               "description_msg": "required",
+           },
+        ],
+        "request_id": "1234",
+     }
+    print(p100_7.convert_snake_to_camel(msg))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
