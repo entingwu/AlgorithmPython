@@ -8,6 +8,8 @@ from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
 from BFS.TopologicalSort.MinimumHeightTrees import MinimumHeightTrees
 from BinaryTree.BinaryTreeRightSideView import BinaryTreeRightSideView, TreeNode
+from BinaryTree.PrintBinaryTree import PrintBinaryTree, TreeNode
+from DFS.AllPathsFromSourcetoTarget import AllPathsFromSourcetoTarget
 from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
 from DFS.EqualTreePartition import EqualTreeParition
 from DFS.FloodFill import FloodFill
@@ -435,6 +437,16 @@ if __name__ == '__main__':
     # p9_4.flatten(treeNode1)
     # p9_4.print(treeNode1)
 
+    p9_4_1 = PrintBinaryTree()
+    treeNode1 = TreeNode(1)
+    treeNode2 = TreeNode(2)
+    treeNode3 = TreeNode(3)
+    treeNode4 = TreeNode(4)
+    treeNode1.left = treeNode2
+    treeNode1.right = treeNode3
+    treeNode2.right = treeNode4
+    print(p9_4_1.printTree1(treeNode1))
+
     # p9_5 = KthSmallestElementInaBST()
     # treeNode1 = TreeNode(1)
     # treeNode2 = TreeNode(2)
@@ -572,6 +584,11 @@ if __name__ == '__main__':
     # n = 4
     # connections = [[0,1],[1,2],[2,0],[1,3]]
     # print(p13_7.criticalConnections(n, connections))
+
+    # p13_8 = AllPathsFromSourcetoTarget()
+    # #graph = [[1, 2], [3], [3], []]
+    # graph = [[4,3,1],[3,2,4],[],[4],[]]
+    # print(p13_8.allPathsSourceTarget(graph))
 
     # Memorization
     # p14 = Triangle()
@@ -809,14 +826,14 @@ if __name__ == '__main__':
     # #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
     # print(p100_2.maxAreaOfIsland(grid))
 
-    p100_3 = RangeSplit()
-    nums = [1,2,0,4,6,7,0,9,0]
-    nums1 = [1, 0, 1]
-    nums2 = [1, 0, 2, 3, 0, 4]
+    # p100_3 = RangeSplit()
+    # nums = [1,2,0,4,6,7,0,9,0]
+    # nums1 = [1, 0, 1]
+    # nums2 = [1, 0, 2, 3, 0, 4]
     #print(p100_3.split_range(nums2))
     # print(p100_3.find_range(nums, 1))
     # print(p100_3.find_range(nums, 4))
-    print(p100_3.find_range(nums2, 2))
+    #print(p100_3.find_range(nums2, 2))
     #print(p100_3.split_index_to_range(nums2))
 
     # p100_4 = OverlapDuration()
