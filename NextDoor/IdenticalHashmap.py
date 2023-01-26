@@ -2,6 +2,7 @@ from typing import Iterable
 
 
 class IdenticalHashmap:
+    # p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}})
     def are_identical(self, map1, map2):
         if type(map1) != dict and type(map2) != dict:
             return map1 == map2

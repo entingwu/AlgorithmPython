@@ -70,3 +70,49 @@ my_list = [3, 1, 5, 19, 20, 16]
 sorted_list, presum = preprocessing(my_list)
 print(multi_range_sum([1, 5]))
 
+# [[1,2], [4,6,7], [9]]
+# [1, 2, 0, 4, 6, 7, 0, 9, 0]
+
+def split_range(nums: List[int]) -> List[List[int]]:
+    if not nums or len(nums) == 0:
+        return []
+    result = []
+    temp = []
+    for i in range(len(nums)):
+        if nums[i] != 0:
+            temp.append(nums[i])
+        if nums[i] == 0 or i == len(nums) - 1:
+            result.append(temp[:])
+            temp = []
+    return result
+
+# Follow up: given an array of integers, and an index k, return the Range contains kth indexed number. If kth number if 0, return None
+#  0 1 2 3 4 5
+# [1,0,2,3,0,4] => [[1], [2,3], [4]]
+# index 0 -> [1]
+# index 2 -> [2,3]
+# index 5 -> [4]
+def find_range(nums: List[int], k: int) -> List[int]:
+    if nums[k] == 0:
+        return None
+    ranges = split_range(list)
+    print(ranges)
+    start, end = 0, len(ranges) - 1
+    while start + 1 < end:
+        mid = (start + end) // 2
+        if ranges[mid][0] <= nums[k] <= ranges[mid][-1]:
+            return ranges[mid]
+        elif nums[k] < ranges[mid][0]:
+            end = mid
+        else:
+            start = mid
+    if ranges[start][0] == nums[k]:
+        return ranges[start]
+    if ranges[end][0] == nums[k]:
+        return ranges[end]
+    return None
+
+list = [1,0,2,3,0,4]
+#list = [1, 0, 1]
+#print(split_range(list))
+print(find_range(list, 2))

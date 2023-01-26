@@ -437,15 +437,15 @@ if __name__ == '__main__':
     # p9_4.flatten(treeNode1)
     # p9_4.print(treeNode1)
 
-    p9_4_1 = PrintBinaryTree()
-    treeNode1 = TreeNode(1)
-    treeNode2 = TreeNode(2)
-    treeNode3 = TreeNode(3)
-    treeNode4 = TreeNode(4)
-    treeNode1.left = treeNode2
-    treeNode1.right = treeNode3
-    treeNode2.right = treeNode4
-    print(p9_4_1.printTree1(treeNode1))
+    # p9_4_1 = PrintBinaryTree()
+    # treeNode1 = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode4 = TreeNode(4)
+    # treeNode1.left = treeNode2
+    # treeNode1.right = treeNode3
+    # treeNode2.right = treeNode4
+    # print(p9_4_1.printTree1(treeNode1))
 
     # p9_5 = KthSmallestElementInaBST()
     # treeNode1 = TreeNode(1)
@@ -815,10 +815,10 @@ if __name__ == '__main__':
     # p100.print_tree(comment_nodes)
 
     # p100_1 = IdenticalHashmap()
-    #print(p100_1.are_identical({'k': 1}, {'k': 1}))
-    #print(p100_1.are_identical({'k': {'nk': None}}, {'k': {'nk': None}}))
-    #print(p100_1.are_identical({'k': 1}, {'k': 1, 'k2': 2}))
-    #print(p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}}))
+    # print(p100_1.are_identical({'k': 1}, {'k': 1}))
+    # print(p100_1.are_identical({'k': {'nk': None}}, {'k': {'nk': None}}))
+    # print(p100_1.are_identical({'k': 1}, {'k': 1, 'k2': 2}))
+    # print(p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}}))
     # print(p100_1.are_identical({'k': {'nk': 1}, 'k2': 2}, {'k': {'nk': 1}}))
 
     # p100_2 = MaxAreaOfIsland()

@@ -40,10 +40,11 @@ class OverlapDuration:
                     intervals[-1][1] = max(right, intervals[-1][1])
                 else:
                     intervals.append([left, right])
-
+        print(intervals)
         overlap = 0
         for interval in intervals:
             overlap += self.find_overlap([interval, busy_interval])
+        print(overlap)
         return overlap / (busy_interval[1] - busy_interval[0])
 
 
