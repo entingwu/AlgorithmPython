@@ -38,3 +38,7 @@ stages = ["1.1-dev", "1.1-rc2", "1.1.2-rc1", "1.2.2", "1.2-dev", "1.2-prod"]
 #print(compareVersionBranch("1.1.2-rc1", "1.1.2-rc2"))
 #print(sorted(versions, key=cmp_to_key(compareVersion)))
 print(sorted(stages, key=cmp_to_key(compareVersionBranch)))
+
+nums = [1, 4, 2, 5]
+print(list(map(str, nums)))
+
