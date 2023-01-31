@@ -8,6 +8,8 @@ from BFS.SlidingPuzzle import SlidingPuzzle
 from BFS.TheMaze import TheMaze
 from BFS.TopologicalSort.MinimumHeightTrees import MinimumHeightTrees
 from BinaryTree.BinaryTreeRightSideView import BinaryTreeRightSideView, TreeNode
+from BinaryTree.ConstructBinaryTreeFromPreorderAndInorderTraversal import \
+    ConstructBinaryTreeFromPreorderAndInorderTraversal
 from BinaryTree.PrintBinaryTree import PrintBinaryTree, TreeNode
 from DFS.AllPathsFromSourcetoTarget import AllPathsFromSourcetoTarget
 from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
@@ -46,6 +48,7 @@ from NextDoor.IdenticalHashmap import IdenticalHashmap
 from NextDoor.OverlapDuration import OverlapDuration
 from NextDoor.ProcessComments import ProcessComments, Comment
 from NextDoor.RangeSplit import RangeSplit
+from SegmentTree.IntervalSum import IntervalSum, Interval
 from String.GroupAnagrams import GroupAnagrams
 from String.LongestCommonPrefix import LongestCommonPrefix
 from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
@@ -65,10 +68,12 @@ from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
 from TwoPointer.SweepLine.InsertInterval import InsertInterval
 from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
 from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
+from TwoPointer.SweepLine.RemoveInterval import RemoveInterval
 from UnionFind.AccountMerge import AccountMerge
 from UnionFind.BricksFallingWhenHit import BricksFallingWhenHit
 from UnionFind.DataStreamAsDisjointIntervals import SummaryRanges
 from UnionFind.MaximumAssociationSet import MaximumAssociationSet
+from UnionFind.MinCostToConnectAllPoints import MinCostToConnectAllPoints
 from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
 from UnionFind.MostStonesRemovedWithSameRowOrColumn import MostStonesRemoveWithSameRowOrColumn
 from UnionFind.NumberOfProvinces import NumberOfProvinces
@@ -198,6 +203,11 @@ if __name__ == '__main__':
     # newInterval = [4,8]
     # print(p4_6_1.insert(intervals, newInterval))
 
+    p4_6_2 = RemoveInterval()
+    intervals = [[-5,-4],[-3,-2],[1,2],[3,5],[8,9]] # [[0, 5]] #[[0, 2], [3, 4], [5, 7]]
+    toBeRemoved = [-1, 4]
+    print(p4_6_2.removeInterval(intervals, toBeRemoved))
+
     # p4_7 = MeetingRooms()
     # intervals = [Interval(1,3), Interval(3,4)]
     # print(p4_7.min_meeting_rooms(intervals))
@@ -237,15 +247,22 @@ if __name__ == '__main__':
     # treeNode2 = TreeNode(2)
     # treeNode3 = TreeNode(3)
     # treeNode5 = TreeNode(5)
+    # treeNode9 = TreeNode(9)
     # treeNode1.left = treeNode3
     # treeNode1.right = treeNode2
     # treeNode3.left = treeNode5
+    # treeNode2.right = treeNode9
     # p7 = BinaryTreePaths()
     # paths = p7.binary_tree_paths2(treeNode1)
     # print(paths)
 
     # p7_1 = MaximumWidthOfBinaryTree()
     # print(p7_1.widthOfBinaryTree(treeNode1))
+
+    # p7_2 = ConstructBinaryTreeFromPreorderAndInorderTraversal()
+    # preorder = [3, 9, 20, 15, 7]
+    # inorder = [9, 3, 15, 20, 7]
+    # print(p7_2.buildTree(preorder, inorder))
 
     # CloneGraph
     # graphNode1 = UndirectedGraphNode(1)
@@ -289,6 +306,10 @@ if __name__ == '__main__':
     # ListA = ["a","b","d","e","f"]
     # ListB = ["b","c","e","g","g"]
     # print(p8_1_3.maximum_association_set(ListA, ListB))
+
+    # p8_1_4 = MinCostToConnectAllPoints()
+    # points = [[0, 0], [2, 2], [3, 10], [5, 2], [7, 0]]
+    # print(p8_1_4.minCostConnectPoints(points))
 
     # Zombie in Matrix
     # p8_2 = ZombieInMatrix()
@@ -708,6 +729,12 @@ if __name__ == '__main__':
     # s = 7
     # print(p17_4.minimum_size(nums, s))
 
+    # p17_5 = IntervalSum()
+    # array = [1, 2, 7, 8, 5]
+    # queries = [Interval(0, 4), Interval(1, 2), Interval(2, 4)]
+    # print(p17_5.interval_sum(array, queries))
+
+
     # String
     #p18 = CircularSentence()
     #print(p18.isCircularSentence("eetcoda"))
@@ -853,20 +880,20 @@ if __name__ == '__main__':
     # p100_6.parseNestedList(nestedList, result)
     # print(result)
 
-    p100_7 = ConvertJson()
-    msg = {
-        "validation_errors": [
-           {
-               "first_name": "christy",
-               "description_msg": "required",
-           },
-           {
-               "last_name": "wu",
-               "description_msg": "required",
-           },
-        ],
-        "request_id": "1234",
-     }
+    # p100_7 = ConvertJson()
+    # msg = {
+    #     "validation_errors": [
+    #        {
+    #            "first_name": "christy",
+    #            "description_msg": "required",
+    #        },
+    #        {
+    #            "last_name": "wu",
+    #            "description_msg": "required",
+    #        },
+    #     ],
+    #     "request_id": "1234",
+    #  }
     #print(p100_7.convert_snake_to_camel(msg))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
