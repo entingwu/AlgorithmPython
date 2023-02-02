@@ -1,82 +1,10 @@
 # This is a sample Python script.
-from BFS.BuildPostOffice import BuildPostOffice
-from BFS.MaximumWidthOfBinaryTree import MaximumWidthOfBinaryTree
-from BFS.ModernLudo import ModernLudo
-from BFS.NumberOfIslands import NumberOfIslands
-from BFS.RottenOranges import RottenOranges
-from BFS.SlidingPuzzle import SlidingPuzzle
-from BFS.TheMaze import TheMaze
-from BFS.TopologicalSort.MinimumHeightTrees import MinimumHeightTrees
-from BinaryTree.BinaryTreeRightSideView import BinaryTreeRightSideView, TreeNode
-from BinaryTree.ConstructBinaryTreeFromPreorderAndInorderTraversal import \
+from BinaryTree.Structure.ConstructBinaryTreeFromInorderAndPostorderTraversal import \
+    ConstructBinaryTreeFromInorderAndPostorderTraversal
+from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndInorderTraversal import \
     ConstructBinaryTreeFromPreorderAndInorderTraversal
-from BinaryTree.PrintBinaryTree import PrintBinaryTree, TreeNode
-from DFS.AllPathsFromSourcetoTarget import AllPathsFromSourcetoTarget
-from DFS.CriticalConnectionInANetwork import CriticalConnectionInANetwork
-from DFS.EqualTreePartition import EqualTreeParition
-from DFS.FloodFill import FloodFill
-from DFS.GenerateParentheses import GenerateParentheses
-from DFS.MaxAreaOfIsland import MaxAreaOfIsland
-from DFS.PacificAtlanticWaterFlow import PacificAtlanticWaterFlow
-from DFS.SudokuSolver import SudokuSolver
-from DFS.WordSquares import WordSquares
-from Heap.LastStoneWeight import LastStoneWeight
-from DataStructure.Stack.BasicCalculator import BasicCalculator
-from DataStructure.Stack.DecodeString import DecodeString
-from DataStructure.TaskScheduler import TaskScheduler
-from DivideConquer.WhereWillTheBallFall import WhereWillTheBallFall
-from DynamicProgramming.ClimbingStairs import ClimbingStairs
-from DynamicProgramming.CoinChange import CoinChange
-from DynamicProgramming.CountSquareSubmatricesWithAllOnes import CountSquareSubmatricsWithAllOnes
-from DynamicProgramming.DistinctSubsequences import DistinctSubsequences
-from DynamicProgramming.MaximumProductSubarray import MaximumProductSubarray
-from DynamicProgramming.NumberOfWaysToStayInTheSamePlaceAfterSomeSteps import \
-    NumberOfWaysToStayInTheSamePlaceAfterSomeSteps
-from DynamicProgramming.PaintHouse import PaintHouse
-from DynamicProgramming.PartitionEqualSubsetSum import PartitionEqualSubsetSum
-from DynamicProgramming.UniquePaths import UniquePaths
-from Heap.TrappingRainWater import TrappingRainWater
-from Math.HappyNumber import HappyNumber
-from Math.SmallestValueAfterReplacingWithSumOfPrimeFactors import SmallestValueAfterReplacingWithSumOfPrimeFactors
-from MonotonicStack.LargestRetangleInHistogram import LargestRectangleInHistogram
-from MonotonicStack.MaxTree import MaxTree
-from MonotonicStack.MaximalRectangle import MaximalRectangle
-from NextDoor.ConvertJson import ConvertJson
-from NextDoor.FindWinnerOnTicTacToeGame import FindWinnerOnTicTacToeGame
-from NextDoor.FlattenNestedListIterator import NestedIterator
-from NextDoor.IdenticalHashmap import IdenticalHashmap
-from NextDoor.OverlapDuration import OverlapDuration
-from NextDoor.ProcessComments import ProcessComments, Comment
-from NextDoor.RangeSplit import RangeSplit
-from SegmentTree.IntervalSum import IntervalSum, Interval
-from String.GroupAnagrams import GroupAnagrams
-from String.LongestCommonPrefix import LongestCommonPrefix
-from String.ShortestDistancetoTargetStringinaCircularArray import ShortestDistancetoTargetStringinaCircularArray
-from String.TakeKofEachCharacterFromLeftandRight import TakeKofEachCharacterFromLeftandRight
-from Trie.AddandSearchWord import WordDictionary
-from Trie.IdentifyingStrings import IdentifyingStrings
-from Trie.WordSearchTrie import WordSearchTrie
-from Trie.WordSquaresTrie import WordSquaresTrie
-from TwoPointer.BullsAndCows import BullsAndCows
-from TwoPointer.LongestSquareStreakInAnArray import LongestSquareStreakInAnArray
-from TwoPointer.SlidingWindow.FindAllAnagramsInaString import FindAllAnagramsInaString
-from TwoPointer.SlidingWindow.Heaters import Heaters
-from TwoPointer.SlidingWindow.LongestRepeatingCharacterReplacement import LongestRepeatingCharacterReplacement
-from TwoPointer.SlidingWindow.MinimumWindowSubstring import MinimumWindowSubstring
-from TwoPointer.SlidingWindow.SubstringWithAtLeastKDistinctCharacters import SubstringWithAtLeastKDistinctCharacters
-from TwoPointer.SweepLine.EmployeeFreeTime import EmployeeFreeTime
-from TwoPointer.SweepLine.InsertInterval import InsertInterval
-from TwoPointer.SweepLine.MeetingRooms import MeetingRooms
-from TwoPointer.SweepLine.MergeIntervals import MergeIntervals, Interval
-from TwoPointer.SweepLine.RemoveInterval import RemoveInterval
-from UnionFind.AccountMerge import AccountMerge
-from UnionFind.BricksFallingWhenHit import BricksFallingWhenHit
-from UnionFind.DataStreamAsDisjointIntervals import SummaryRanges
-from UnionFind.MaximumAssociationSet import MaximumAssociationSet
-from UnionFind.MinCostToConnectAllPoints import MinCostToConnectAllPoints
-from UnionFind.MinimumSpanningTree import MinimumSpanningTree, Connection
-from UnionFind.MostStonesRemovedWithSameRowOrColumn import MostStonesRemoveWithSameRowOrColumn
-from UnionFind.NumberOfProvinces import NumberOfProvinces
+from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
+from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -203,10 +131,10 @@ if __name__ == '__main__':
     # newInterval = [4,8]
     # print(p4_6_1.insert(intervals, newInterval))
 
-    p4_6_2 = RemoveInterval()
-    intervals = [[-5,-4],[-3,-2],[1,2],[3,5],[8,9]] # [[0, 5]] #[[0, 2], [3, 4], [5, 7]]
-    toBeRemoved = [-1, 4]
-    print(p4_6_2.removeInterval(intervals, toBeRemoved))
+    # p4_6_2 = RemoveInterval()
+    # intervals = [[-5,-4],[-3,-2],[1,2],[3,5],[8,9]] # [[0, 5]] #[[0, 2], [3, 4], [5, 7]]
+    # toBeRemoved = [-1, 4]
+    # print(p4_6_2.removeInterval(intervals, toBeRemoved))
 
     # p4_7 = MeetingRooms()
     # intervals = [Interval(1,3), Interval(3,4)]
@@ -259,10 +187,13 @@ if __name__ == '__main__':
     # p7_1 = MaximumWidthOfBinaryTree()
     # print(p7_1.widthOfBinaryTree(treeNode1))
 
-    # p7_2 = ConstructBinaryTreeFromPreorderAndInorderTraversal()
-    # preorder = [3, 9, 20, 15, 7]
-    # inorder = [9, 3, 15, 20, 7]
-    # print(p7_2.buildTree(preorder, inorder))
+    p7_2 = ConstructBinaryTreeFromPreorderAndInorderTraversal()
+    p7_2_0 = ConstructBinaryTreeFromInorderAndPostorderTraversal()
+    preorder = [3, 9, 20, 15, 7]
+    inorder = [9, 3, 15, 20, 7]
+    postorder = [9, 15, 7, 20, 3]
+    #print(p7_2.buildTree(preorder, inorder))
+    print(p7_2_0.buildTree(inorder, postorder))
 
     # CloneGraph
     # graphNode1 = UndirectedGraphNode(1)
@@ -467,6 +398,50 @@ if __name__ == '__main__':
     # treeNode1.right = treeNode3
     # treeNode2.right = treeNode4
     # print(p9_4_1.printTree1(treeNode1))
+
+    # Structure Change
+    # p9_4_2 = SerializeAndDeserializeBinaryTree()
+    # treeNode1 = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode4 = TreeNode(4)
+    # treeNode5 = TreeNode(5)
+    # treeNode1.left = treeNode2
+    # treeNode1.right = treeNode3
+    # treeNode3.left = treeNode4
+    # treeNode3.right = treeNode5
+    # tree = p9_4_2.serialize(treeNode1)
+    # print("se", tree)
+    # node = p9_4_2.deserialize(tree)
+    # tree = p9_4_2.serialize(node)
+    # print("de", tree)
+
+    # p9_4_3 = SerializeAndDeserializeNaryTree()
+    # node1 = Node(1)
+    # node2 = Node(2)
+    # node3 = Node(3)
+    # node4 = Node(4)
+    # node5 = Node(5)
+    # node6 = Node(6)
+    # node1.children = [node3, node2, node4]
+    # node3.children = [node5, node6]
+    # tree = p9_4_3.serialize(node1)
+    # print("sn", tree)
+    # node = p9_4_3.deserialize(tree)
+    # tree = p9_4_3.serialize(node)
+    # print("dn", tree)
+
+    p9_4_4 = SerializeAndDeserializeBST()
+    treeNode1 = TreeNode(1)
+    treeNode2 = TreeNode(2)
+    treeNode3 = TreeNode(3)
+    treeNode2.left = treeNode1
+    treeNode2.right = treeNode3
+    tree = p9_4_4.serialize(treeNode2)
+    print("sbst", tree)
+    node = p9_4_4.deserialize(tree)
+    tree = p9_4_4.serialize(node)
+    print("dbst", tree)
 
     # p9_5 = KthSmallestElementInaBST()
     # treeNode1 = TreeNode(1)
