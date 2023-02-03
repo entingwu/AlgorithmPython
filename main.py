@@ -1,8 +1,11 @@
 # This is a sample Python script.
+from BinaryTree.LCA.LowestCommonAncestorOfABinaryTree import LowestCommonAncestorOfABinaryTree, TreeNode
 from BinaryTree.Structure.ConstructBinaryTreeFromInorderAndPostorderTraversal import \
     ConstructBinaryTreeFromInorderAndPostorderTraversal
 from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndInorderTraversal import \
     ConstructBinaryTreeFromPreorderAndInorderTraversal
+from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndPostorderTraversal import \
+    ConstructBinaryTreeFromPreorderAndPostorderTraversal
 from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
 from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
 
@@ -187,13 +190,36 @@ if __name__ == '__main__':
     # p7_1 = MaximumWidthOfBinaryTree()
     # print(p7_1.widthOfBinaryTree(treeNode1))
 
-    p7_2 = ConstructBinaryTreeFromPreorderAndInorderTraversal()
-    p7_2_0 = ConstructBinaryTreeFromInorderAndPostorderTraversal()
-    preorder = [3, 9, 20, 15, 7]
-    inorder = [9, 3, 15, 20, 7]
-    postorder = [9, 15, 7, 20, 3]
+    # p7_2 = ConstructBinaryTreeFromPreorderAndInorderTraversal()
+    # p7_2_0 = ConstructBinaryTreeFromInorderAndPostorderTraversal()
+    # p7_2_1 = ConstructBinaryTreeFromPreorderAndPostorderTraversal()
+    # preorder = [3, 9, 20, 15, 7]
+    # inorder = [9, 3, 15, 20, 7]
+    # postorder = [9, 15, 7, 20, 3]
     #print(p7_2.buildTree(preorder, inorder))
-    print(p7_2_0.buildTree(inorder, postorder))
+    #print(p7_2_0.buildTree(inorder, postorder))
+    #print(p7_2_1.constructFromPrePost(preorder, postorder))
+
+    # LCA
+    p7_3 = LowestCommonAncestorOfABinaryTree()
+    treeNode3 = TreeNode(3)
+    treeNode5 = TreeNode(5)
+    treeNode6 = TreeNode(6)
+    treeNode2 = TreeNode(2)
+    treeNode7 = TreeNode(7)
+    treeNode4 = TreeNode(4)
+    treeNode1 = TreeNode(1)
+    treeNode0 = TreeNode(0)
+    treeNode8 = TreeNode(8)
+    treeNode2.left = treeNode7
+    treeNode2.right = treeNode4
+    treeNode5.left = treeNode6
+    treeNode5.right = treeNode2
+    treeNode3.left = treeNode5
+    treeNode1.left = treeNode0
+    treeNode1.right = treeNode8
+    treeNode3.right = treeNode1
+    print(p7_3.lowestCommonAncestor(treeNode3, treeNode5, treeNode1))
 
     # CloneGraph
     # graphNode1 = UndirectedGraphNode(1)
@@ -431,17 +457,17 @@ if __name__ == '__main__':
     # tree = p9_4_3.serialize(node)
     # print("dn", tree)
 
-    p9_4_4 = SerializeAndDeserializeBST()
-    treeNode1 = TreeNode(1)
-    treeNode2 = TreeNode(2)
-    treeNode3 = TreeNode(3)
-    treeNode2.left = treeNode1
-    treeNode2.right = treeNode3
-    tree = p9_4_4.serialize(treeNode2)
-    print("sbst", tree)
-    node = p9_4_4.deserialize(tree)
-    tree = p9_4_4.serialize(node)
-    print("dbst", tree)
+    # p9_4_4 = SerializeAndDeserializeBST()
+    # treeNode1 = TreeNode(1)
+    # treeNode2 = TreeNode(2)
+    # treeNode3 = TreeNode(3)
+    # treeNode2.left = treeNode1
+    # treeNode2.right = treeNode3
+    # tree = p9_4_4.serialize(treeNode2)
+    # print("sbst", tree)
+    # node = p9_4_4.deserialize(tree)
+    # tree = p9_4_4.serialize(node)
+    # print("dbst", tree)
 
     # p9_5 = KthSmallestElementInaBST()
     # treeNode1 = TreeNode(1)

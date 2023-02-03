@@ -28,6 +28,7 @@ class ConstructBinaryTreeFromPreorderAndInorderTraversal:
 
         # 2. spilt inorder[]
         split = self.map[val]
+        left_tree_size = split - startIn
 
         # 3. dfs
         root.left = self.helper(preorder, inorder, startIn, split - 1)
