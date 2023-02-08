@@ -8,6 +8,8 @@ from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndPostorderTraversal i
     ConstructBinaryTreeFromPreorderAndPostorderTraversal
 from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
 from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
+from Sort.FindTheKthLargestIntegerInTheArray import FindTheKthLargestIntegerInTheArray
+from Sort.KthLargestElementInAnArray import KthLargestElementInAnArray
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -24,6 +26,16 @@ if __name__ == '__main__':
     # a = [3, 2, 1, 4, 5]
     # p0_1.sort_integers(a)
     # print(a)
+
+    # p0_2 = KthLargestElementInAnArray()
+    # nums = [3, 2, 1, 5, 6, 4]
+    # k = 2
+    # print(p0_2.findKthLargest(nums, k))
+
+    p0_2_1 = FindTheKthLargestIntegerInTheArray()
+    nums = ["2", "21", "12", "1"]
+    k = 3
+    print(p0_2_1.kthLargestNumber(nums, k))
 
     # BinarySearch
     # p0_3 = BinarySearch()
@@ -201,25 +213,25 @@ if __name__ == '__main__':
     #print(p7_2_1.constructFromPrePost(preorder, postorder))
 
     # LCA
-    p7_3 = LowestCommonAncestorOfABinaryTree()
-    treeNode3 = TreeNode(3)
-    treeNode5 = TreeNode(5)
-    treeNode6 = TreeNode(6)
-    treeNode2 = TreeNode(2)
-    treeNode7 = TreeNode(7)
-    treeNode4 = TreeNode(4)
-    treeNode1 = TreeNode(1)
-    treeNode0 = TreeNode(0)
-    treeNode8 = TreeNode(8)
-    treeNode2.left = treeNode7
-    treeNode2.right = treeNode4
-    treeNode5.left = treeNode6
-    treeNode5.right = treeNode2
-    treeNode3.left = treeNode5
-    treeNode1.left = treeNode0
-    treeNode1.right = treeNode8
-    treeNode3.right = treeNode1
-    print(p7_3.lowestCommonAncestor(treeNode3, treeNode5, treeNode1))
+    # p7_3 = LowestCommonAncestorOfABinaryTree()
+    # treeNode3 = TreeNode(3)
+    # treeNode5 = TreeNode(5)
+    # treeNode6 = TreeNode(6)
+    # treeNode2 = TreeNode(2)
+    # treeNode7 = TreeNode(7)
+    # treeNode4 = TreeNode(4)
+    # treeNode1 = TreeNode(1)
+    # treeNode0 = TreeNode(0)
+    # treeNode8 = TreeNode(8)
+    # treeNode2.left = treeNode7
+    # treeNode2.right = treeNode4
+    # treeNode5.left = treeNode6
+    # treeNode5.right = treeNode2
+    # treeNode3.left = treeNode5
+    # treeNode1.left = treeNode0
+    # treeNode1.right = treeNode8
+    # treeNode3.right = treeNode1
+    # print(p7_3.lowestCommonAncestor(treeNode3, treeNode5, treeNode1))
 
     # CloneGraph
     # graphNode1 = UndirectedGraphNode(1)
