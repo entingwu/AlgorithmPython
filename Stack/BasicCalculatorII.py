@@ -1,5 +1,6 @@
-class BasicCalculator:
-    def calculate(self, s: str) -> int:
+class BasicCalculatorII:
+
+    def calculate1(self, s: str) -> int:
         if not s:
             return 0
         num, stack, sign = 0, [], "+"
@@ -24,4 +25,23 @@ class BasicCalculator:
                 num = 0
                 sign = ch
         return sum(stack)
+
+    def get_expression(self, s):
+        expression = []
+        val = None
+        for char in s:
+            if char == ' ':
+                continue
+            if char in ['+', '-', '*', '/', '(', ')']:
+                if val is not None:
+                    expression.append(str(val))
+                expression.append(char)
+                val = None
+            else:
+                if val is None:
+                    val = 0
+                val = val * 10 + ord(char) - ord('0')
+        if val is not None:
+            expression.append(str(val))
+        return expression
 

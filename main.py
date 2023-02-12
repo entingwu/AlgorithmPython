@@ -8,8 +8,12 @@ from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndPostorderTraversal i
     ConstructBinaryTreeFromPreorderAndPostorderTraversal
 from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
 from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
+from DynamicProgramming.OnesAndZeros import OnesAndZeros
 from Sort.FindTheKthLargestIntegerInTheArray import FindTheKthLargestIntegerInTheArray
 from Sort.KthLargestElementInAnArray import KthLargestElementInAnArray
+from Stack.BasicCalculator import BasicCalculator
+from Stack.BasicCalculatorII import BasicCalculatorII
+from TwoPointer.TwoSum.CountTheNumberOfFairPairs import CountTheNumberOfFairPairs
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -32,10 +36,10 @@ if __name__ == '__main__':
     # k = 2
     # print(p0_2.findKthLargest(nums, k))
 
-    p0_2_1 = FindTheKthLargestIntegerInTheArray()
-    nums = ["2", "21", "12", "1"]
-    k = 3
-    print(p0_2_1.kthLargestNumber(nums, k))
+    # p0_2_1 = FindTheKthLargestIntegerInTheArray()
+    # nums = ["2", "21", "12", "1"]
+    # k = 3
+    # print(p0_2_1.kthLargestNumber(nums, k))
 
     # BinarySearch
     # p0_3 = BinarySearch()
@@ -670,7 +674,12 @@ if __name__ == '__main__':
     # s = "3[a2[c]]" #"3[a2[c]]"
     # print(p15_3.decodeString(s))
 
-    # p15_3_1 = BasicCalculator()
+    # p15_3_0 = BasicCalculator()
+    # print(p15_3_0.calculate("8-(3+1*2)"))
+
+    # p15_3_1 = BasicCalculatorII()
+    # s1 = "(1+25)*3"
+    # print(p15_3_1.get_expression(s1))
     # s = "14-3/2"
     # print(p15_3_1.calculate(s))
 
@@ -721,6 +730,17 @@ if __name__ == '__main__':
     # p16_9 = MaximumProductSubarray()
     # nums = [2, 3, -2, 4]
     # print(p16_9.maxProduct(nums))
+
+    p16_9_1 = CountTheNumberOfFairPairs()
+    # strs = ["10", "0", "1"]
+    # m, n = 1, 1
+    # p16_9_1.findMaxForm(strs, m, n)
+    # nums = [5, 14, 13, 8, 12]
+    # print(p16_9_1.findTheArrayConcVal(nums))
+
+    nums = [0, 1, 7, 4, 4, 5]
+    lower, upper = 3, 6
+    print(p16_9_1.countFairPairs(nums, lower, upper))
 
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
