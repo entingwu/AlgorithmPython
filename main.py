@@ -14,6 +14,7 @@ from Sort.KthLargestElementInAnArray import KthLargestElementInAnArray
 from Stack.BasicCalculator import BasicCalculator
 from Stack.BasicCalculatorII import BasicCalculatorII
 from TwoPointer.TwoSum.CountTheNumberOfFairPairs import CountTheNumberOfFairPairs
+from TwoPointer.TwoSum.ThreeSumWithMultiplicity import ThreeSumWithMultiplicity
 
 # Press ⌃R to execute it or replace it with your code.
 
@@ -85,6 +86,11 @@ if __name__ == '__main__':
     # #p2.add(2)
     # print(p2.find(4))
     # print(p2.find(7))
+
+    p2_0 = ThreeSumWithMultiplicity()
+    arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+    target = 8
+    print(p2_0.threeSumMulti1(arr, target))
 
     # p2_1 = BullsAndCows()
     # secret, guess = "1122", "1222"
@@ -731,16 +737,16 @@ if __name__ == '__main__':
     # nums = [2, 3, -2, 4]
     # print(p16_9.maxProduct(nums))
 
-    p16_9_1 = CountTheNumberOfFairPairs()
+    # p16_9_1 = CountTheNumberOfFairPairs()
     # strs = ["10", "0", "1"]
     # m, n = 1, 1
     # p16_9_1.findMaxForm(strs, m, n)
     # nums = [5, 14, 13, 8, 12]
     # print(p16_9_1.findTheArrayConcVal(nums))
 
-    nums = [0, 1, 7, 4, 4, 5]
-    lower, upper = 3, 6
-    print(p16_9_1.countFairPairs(nums, lower, upper))
+    # nums = [0, 1, 7, 4, 4, 5]
+    # lower, upper = 3, 6
+    # print(p16_9_1.countFairPairs(nums, lower, upper))
 
     # Prefix Sum
     # p17_1 = SubarraySumEqualsToK()
