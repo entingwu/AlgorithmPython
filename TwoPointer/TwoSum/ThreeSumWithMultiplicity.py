@@ -1,5 +1,6 @@
 import collections
 from typing import List
+import math
 
 class ThreeSumWithMultiplicity:
     MOD = 10 ** 9 + 7
@@ -48,3 +49,28 @@ class ThreeSumWithMultiplicity:
                         result += cnt_i * cnt_j * cnt_k
                     result %= self.MOD
         return int(result)
+
+    def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
+        result = []
+        i, j = 0, 0
+        while i < len(nums1) and j < len(nums2):
+            id1, val1 = nums1[i]
+            id2, val2 = nums2[j]
+            print(id1, val1, id2, val2)
+            if id1 == id2:
+                result.append([id1, val1 + val2])
+                i += 1
+                j += 1
+            elif id1 < id2:
+                result.append(nums1[i])
+                i += 1
+            else:
+                result.append(nums2[j])
+                j += 1
+        while i < len(nums1):
+            result.append(nums1[i])
+            i += 1
+        while j < len(nums2):
+            result.append(nums2[j])
+            j += 1
+        return result

@@ -8,11 +8,14 @@ from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndPostorderTraversal i
     ConstructBinaryTreeFromPreorderAndPostorderTraversal
 from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
 from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
+from BitManipulation.MinimumOperationsToReduceAnInteger import MinimumOperationsToReduceAnInteger
 from DynamicProgramming.OnesAndZeros import OnesAndZeros
+from Math.CountTheNumberOfSquareFreeSubsets import CountTheNumberOfSquareFreeSubsets
 from Sort.FindTheKthLargestIntegerInTheArray import FindTheKthLargestIntegerInTheArray
 from Sort.KthLargestElementInAnArray import KthLargestElementInAnArray
 from Stack.BasicCalculator import BasicCalculator
 from Stack.BasicCalculatorII import BasicCalculatorII
+from TwoPointer.FindTheMaximumNumberOfMarkedIndices import FindTheMaximumNumberOfMarkedIndices
 from TwoPointer.TwoSum.CountTheNumberOfFairPairs import CountTheNumberOfFairPairs
 from TwoPointer.TwoSum.ThreeSumWithMultiplicity import ThreeSumWithMultiplicity
 
@@ -87,14 +90,22 @@ if __name__ == '__main__':
     # print(p2.find(4))
     # print(p2.find(7))
 
-    p2_0 = ThreeSumWithMultiplicity()
-    arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
-    target = 8
-    print(p2_0.threeSumMulti1(arr, target))
+    # p2_0 = ThreeSumWithMultiplicity()
+    # arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+    # target = 8
+    # print(p2_0.threeSumMulti1(arr, target))
+
+    # nums1 = [[2, 4], [3, 6], [5, 5]]
+    # nums2 = [[1, 3], [4, 3]]
+    # print(p2_0.mergeArrays(nums1, nums2))
 
     # p2_1 = BullsAndCows()
     # secret, guess = "1122", "1222"
     # p2_1.getHint(secret, guess)
+
+    p2_2 = FindTheMaximumNumberOfMarkedIndices()
+    nums = [42,83,48,10,24,55,9,100,10,17,17,99,51,32,16,98,99,31,28,68,71,14,64,29,15,40]
+    print(p2_2.maxNumOfMarkedIndices(nums))
 
     # 57. 3Sum
     # p3 = ThreeSum()
@@ -846,6 +857,10 @@ if __name__ == '__main__':
     # n = 15
     # print(p22_2.smallestValue(n))
 
+    p22_3 = CountTheNumberOfSquareFreeSubsets()
+    nums = [26,6,4,27,6,18] #[1] #[3, 4, 4, 5]
+    print(p22_3.squareFreeSubsets(nums))
+
 
     # p23_1 = ShortestDistancetoTargetStringinaCircularArray()
     # words = ["ibkgecmeyx","jsdkekkjsb","gdjgdtjtrs","jsdkekkjsb","jsdkekkjsb","jsdkekkjsb","gdjgdtjtrs","msjlfpawbx","pbgjhutcwb","gdjgdtjtrs"]
@@ -872,6 +887,9 @@ if __name__ == '__main__':
     # p24_3.addNum(3)
     # p24_3.addNum(2)
     # print(p24_3.getIntervals())
+
+    # p25_0 = MinimumOperationsToReduceAnInteger()
+    # print(p25_0.minOperations1(7862))
 
 
     # NEXT DOOR
