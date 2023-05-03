@@ -1,4 +1,7 @@
 # This is a sample Python script.
+from BFS.Graph.MinimumCostOfaPathWithSpecialRoads import MinimumCostOfaPathWithSpecialRoads
+from DFS.MinimizeTheTotalPriceOfTheTrips import MinimizeTheTotalPriceOfTheTrips
+from BinaryTree.FindDuplicateSubtrees import FindDuplicateSubtrees, TreeNode
 from BinaryTree.LCA.LowestCommonAncestorOfABinaryTree import LowestCommonAncestorOfABinaryTree, TreeNode
 from BinaryTree.Structure.ConstructBinaryTreeFromInorderAndPostorderTraversal import \
     ConstructBinaryTreeFromInorderAndPostorderTraversal
@@ -8,14 +11,20 @@ from BinaryTree.Structure.ConstructBinaryTreeFromPreorderAndPostorderTraversal i
     ConstructBinaryTreeFromPreorderAndPostorderTraversal
 from BinaryTree.Structure.SerializeAndDeserializeBST import SerializeAndDeserializeBST
 from BinaryTree.Structure.SerializeAndDeserializeBinaryTree import TreeNode
+from BitManipulation.CountTheNumberOfBeautifulSubarrays import CountTheNumberOfBeautifulSubarrays
 from BitManipulation.MinimumOperationsToReduceAnInteger import MinimumOperationsToReduceAnInteger
 from DynamicProgramming.OnesAndZeros import OnesAndZeros
+from Heap.FindTheMaximumDivisibilityScore import FindTheMaximumDivisibilityScore
 from Math.CountTheNumberOfSquareFreeSubsets import CountTheNumberOfSquareFreeSubsets
+from Math.SplitTheArrayToMakeCoprimeProducts import SplitTheArrayToMakeCoprimeProducts
+from NextDoor.NextDoorPractice import NextDoorPractice, Comment
+from NextDoor.OverlapDuration import OverlapDuration
 from Sort.FindTheKthLargestIntegerInTheArray import FindTheKthLargestIntegerInTheArray
 from Sort.KthLargestElementInAnArray import KthLargestElementInAnArray
 from Stack.BasicCalculator import BasicCalculator
 from Stack.BasicCalculatorII import BasicCalculatorII
 from TwoPointer.FindTheMaximumNumberOfMarkedIndices import FindTheMaximumNumberOfMarkedIndices
+from TwoPointer.SlidingWindow.SlidingSubarrayBeauty import SlidingSubarrayBeauty
 from TwoPointer.TwoSum.CountTheNumberOfFairPairs import CountTheNumberOfFairPairs
 from TwoPointer.TwoSum.ThreeSumWithMultiplicity import ThreeSumWithMultiplicity
 
@@ -103,9 +112,10 @@ if __name__ == '__main__':
     # secret, guess = "1122", "1222"
     # p2_1.getHint(secret, guess)
 
-    p2_2 = FindTheMaximumNumberOfMarkedIndices()
-    nums = [42,83,48,10,24,55,9,100,10,17,17,99,51,32,16,98,99,31,28,68,71,14,64,29,15,40]
-    print(p2_2.maxNumOfMarkedIndices(nums))
+    # p2_2 = FindTheMaximumNumberOfMarkedIndices()
+    # #nums = [9, 2, 5, 4]
+    # nums = [42,83,48,10,24,55,9,100,10,17,17,99,51,32,16,98,99,31,28,68,71,14,64,29,15,40]
+    # print(p2_2.maxNumOfMarkedIndices(nums))
 
     # 57. 3Sum
     # p3 = ThreeSum()
@@ -141,6 +151,12 @@ if __name__ == '__main__':
     # target = "ABC"
     # #source, target = "abc", "ac"
     # print(p4_5.min_window(source, target))
+
+    # p4_6 = SlidingSubarrayBeauty()
+    # nums = [1, -1, -3, -2, 3]
+    # k = 3
+    # x = 2
+    # print(p4_6.getSubarrayMax(nums, k, x))
 
     # p4_5_1 = Heaters()
     # houses = [1, 2, 3, 4]
@@ -267,6 +283,13 @@ if __name__ == '__main__':
     # p8 = CloneGraph()
     # p8.clone_graph(graphNode1)
 
+    # p8_1 = MinimizeTheTotalPriceOfTheTrips()
+    # n = 4
+    # edges = [[0, 1], [1, 2], [1, 3]]
+    # price = [2, 2, 10, 6]
+    # trips = [[0, 3], [2, 1], [2, 3]]
+    # print(p8_1.minimumTotalPrice(n, edges, price, trips))
+
     # NumberOfIslands
     # grid = [
     #     [1, 1, 0, 0, 0],
@@ -355,6 +378,15 @@ if __name__ == '__main__':
     # p9_1_2 = WallsAndGates()
     # rooms = [[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
     # print(p9_1_2.walls_and_gates(rooms))
+
+    # p9_1_2_1 = MinimumCostOfaPathWithSpecialRoads()
+    # # start = [1, 1]
+    # # target = [4, 5]
+    # # specialRoads = [[1,2,3,3,2],[3,4,4,5,1]]
+    # start = [3, 2]
+    # target = [5, 7]
+    # specialRoads = [[3, 2, 3, 4, 4], [3, 3, 5, 5, 5], [3, 4, 5, 6, 6]]
+    # print(p9_1_2_1.minimumCost(start, target, specialRoads))
 
     # p9_1_3 = TopologicalSort()
     # node0 = Node(0)
@@ -457,6 +489,11 @@ if __name__ == '__main__':
     # treeNode1.right = treeNode3
     # treeNode2.right = treeNode4
     # print(p9_4_1.printTree1(treeNode1))
+
+    # p9_4_1_1 = FindDuplicateSubtrees()
+    # treeNode1 = TreeNode(1)
+    #
+    # p9_4_1_1.findDuplicateSubtrees(treeNode1)
 
     # Structure Change
     # p9_4_2 = SerializeAndDeserializeBinaryTree()
@@ -857,10 +894,13 @@ if __name__ == '__main__':
     # n = 15
     # print(p22_2.smallestValue(n))
 
-    p22_3 = CountTheNumberOfSquareFreeSubsets()
-    nums = [26,6,4,27,6,18] #[1] #[3, 4, 4, 5]
-    print(p22_3.squareFreeSubsets(nums))
+    # p22_3 = CountTheNumberOfSquareFreeSubsets()
+    # nums = [26,6,4,27,6,18] #[1] #[3, 4, 4, 5]
+    # print(p22_3.squareFreeSubsets(nums))
 
+    # p22_4 = SplitTheArrayToMakeCoprimeProducts()
+    # nums = [4,7,8,15,3,5]
+    # print(p22_4.findValidSplit(nums))
 
     # p23_1 = ShortestDistancetoTargetStringinaCircularArray()
     # words = ["ibkgecmeyx","jsdkekkjsb","gdjgdtjtrs","jsdkekkjsb","jsdkekkjsb","jsdkekkjsb","gdjgdtjtrs","msjlfpawbx","pbgjhutcwb","gdjgdtjtrs"]
@@ -882,14 +922,26 @@ if __name__ == '__main__':
     # height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2 ,1]
     # #print(p24_2.trap(height))
     #
+
     # p24_3 = SummaryRanges()
     # p24_3.addNum(1)
     # p24_3.addNum(3)
     # p24_3.addNum(2)
     # print(p24_3.getIntervals())
 
+    # p24_4 = FindTheMaximumDivisibilityScore()
+    # nums = [12]
+    # divisors = [10, 16]
+    # print(p24_4.maxDivScore(nums, divisors))
+    # word = "cba"
+    # print(p24_4.addMinimum(word))
+
     # p25_0 = MinimumOperationsToReduceAnInteger()
     # print(p25_0.minOperations1(7862))
+
+    # p25_1 = CountTheNumberOfBeautifulSubarrays()
+    # nums = [4, 3, 1, 2, 4]
+    # print(p25_1.beautifulSubarrays(nums))
 
 
     # NEXT DOOR
@@ -897,6 +949,11 @@ if __name__ == '__main__':
     # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
     # comment_nodes = p100.flat_to_tree(comments)
     # p100.print_tree(comment_nodes)
+
+    p100_0 = NextDoorPractice()
+    comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
+    comment_nodes = p100_0.flat_to_tree1(comments)
+    p100_0.print_tree(comment_nodes)
 
     # p100_1 = IdenticalHashmap()
     # print(p100_1.are_identical({'k': 1}, {'k': 1}))
