@@ -1,5 +1,7 @@
 # This is a sample Python script.
 from BFS.Graph.MinimumCostOfaPathWithSpecialRoads import MinimumCostOfaPathWithSpecialRoads
+from BFS.NumberOfIslands import NumberOfIslands
+from DFS.MaxAreaOfIsland import MaxAreaOfIsland
 from DFS.MinimizeTheTotalPriceOfTheTrips import MinimizeTheTotalPriceOfTheTrips
 from BinaryTree.FindDuplicateSubtrees import FindDuplicateSubtrees, TreeNode
 from BinaryTree.LCA.LowestCommonAncestorOfABinaryTree import LowestCommonAncestorOfABinaryTree, TreeNode
@@ -299,7 +301,7 @@ if __name__ == '__main__':
     #     [0, 0, 0, 0, 1]
     # ]
     # p8_1 = NumberOfIslands()
-    # # print(p8_1.num_islands(grid))
+    # print("@", p8_1.num_islands(grid))
     # m, n = 3, 3
     # positions = [[0, 0], [0, 1], [1, 2], [2, 1]]
     # print(p8_1.numIslands2(m, n, positions))
@@ -950,10 +952,10 @@ if __name__ == '__main__':
     # comment_nodes = p100.flat_to_tree(comments)
     # p100.print_tree(comment_nodes)
 
-    p100_0 = NextDoorPractice()
-    comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
-    comment_nodes = p100_0.flat_to_tree1(comments)
-    p100_0.print_tree(comment_nodes)
+    # p100_0 = NextDoorPractice()
+    # comments = [Comment(1, None), Comment(2, 1), Comment(3, 1), Comment(3, 1), Comment(4, None), Comment(5, 4), Comment(6, 5)]
+    # comment_nodes = p100_0.flat_to_tree1(comments)
+    # p100_0.print_tree(comment_nodes)
 
     # p100_1 = IdenticalHashmap()
     # print(p100_1.are_identical({'k': 1}, {'k': 1}))
@@ -962,10 +964,10 @@ if __name__ == '__main__':
     # print(p100_1.are_identical({'k': {'nk': 1}}, {'k': {'nk': 2}}))
     # print(p100_1.are_identical({'k': {'nk': 1}, 'k2': 2}, {'k': {'nk': 1}}))
 
-    # p100_2 = MaxAreaOfIsland()
-    # grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
+    p100_2 = MaxAreaOfIsland()
+    grid = [[1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0]]
     # #grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
-    # print(p100_2.maxAreaOfIsland(grid))
+    print(p100_2.maxAreaOfIsland(grid))
 
     # p100_3 = RangeSplit()
     # nums = [1,2,0,4,6,7,0,9,0]

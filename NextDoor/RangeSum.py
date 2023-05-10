@@ -116,3 +116,13 @@ list = [1,0,2,3,0,4]
 #list = [1, 0, 1]
 #print(split_range(list))
 print(find_range(list, 2))
+
+def get_presum(nums) -> List[int]:
+    presum = [0]
+    for num in nums:
+        presum.append(presum[-1] + num)
+    return presum
+
+#     0 1 1 3 6 6 10
+list = [1,0,2,3,0,4]
+print(get_presum(list))

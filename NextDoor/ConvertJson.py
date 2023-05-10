@@ -46,3 +46,7 @@ class ConvertJson:
                 newItem = self.convert_array_snake_to_camel(item)
             newArray.append(newItem)
         return newArray
+
+    def snake_to_camel1(s):
+        s = re.sub(r"_|-+", " ", s).title().replace(" ", "")
+        return ''.join([s[0].lower(), s[1:]])

@@ -16,3 +16,11 @@ class NestedIterator:
             return result.append(nested_list)
         for item in nested_list:
             self.parseNestedList(item, result)
+
+def flattenList(nestedList):
+    if not (bool(nestedList)):
+        return nestedList
+
+    if isinstance(nestedList[0], list):
+        return flattenList(*nestedList[:1]) + flattenList(nestedList[1:])
+    return nestedList[:1] + flattenList(nestedList[1:])

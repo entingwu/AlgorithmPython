@@ -16,9 +16,19 @@ class NumberOfIslands:
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] and (i, j) not in visited:
-                    self.bfs(grid, i, j, visited)
+                    self.dfs(grid, i, j, visited)
                     islands += 1
         return islands
+
+    def dfs(self, grid, x, y, visited):
+        if not self.is_valid(grid, x, y, visited):
+            return
+
+        visited.add((x, y))
+        for dx, dy in self.DIRECTIONS:
+            new_x = x + dx
+            new_y = y + dy
+            self.dfs(grid, new_x, new_y, visited)
 
     def bfs(self, grid, x, y, visited):
         queue = collections.deque([(x, y)])
